@@ -7,7 +7,7 @@ export default function Testimonials() {
   return (
     <section className="py-24 bg-charcoal text-sand">
       <div className="max-w-7xl mx-auto px-6 text-center">
-        <h2 className="font-heading text-4xl text-teal mb-16">Guest Experiences</h2>
+        <h2 className="font-heading text-4xl text-teal-light mb-16">Guest Experiences</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {displayedTestimonials.map((t, idx) => (
@@ -20,7 +20,7 @@ export default function Testimonials() {
               <p className="font-body italic text-lg leading-relaxed mb-6 opacity-90 flex-grow">
                 "{t.quote}"
               </p>
-              <span className="font-heading text-xl text-teal">{t.name}</span>
+              <span className="font-heading text-xl text-teal-light">{t.name}</span>
             </div>
           ))}
         </div>

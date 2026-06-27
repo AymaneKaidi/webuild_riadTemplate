@@ -11,8 +11,12 @@ export default {
         terracotta: {
           DEFAULT: '#C45A45',
           dark: '#A8452F',
+          light: '#E87D69',
         },
-        teal: '#2B5B54',
+        teal: {
+          DEFAULT: '#2B5B54',
+          light: '#6CBBAF',
+        },
         charcoal: '#222525',
       },
       fontFamily: {

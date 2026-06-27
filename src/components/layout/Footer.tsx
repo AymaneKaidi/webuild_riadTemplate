@@ -5,14 +5,14 @@ export default function Footer() {
     <footer className="bg-charcoal text-sand py-16">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
         <div className="col-span-1 md:col-span-1">
-          <h2 className="font-heading text-3xl mb-4 text-teal">Dar Safaa</h2>
+          <h2 className="font-heading text-3xl mb-4 text-teal-light">Dar Safaa</h2>
           <p className="font-body text-sm opacity-80 leading-relaxed mb-6">
             A sanctuary of purity and serenity in the heart of the Medina. Experience the authentic warmth of Moroccan hospitality.
           </p>
         </div>
         
         <div>
-          <h3 className="font-heading text-xl mb-4 text-terracotta">Navigation</h3>
+          <h3 className="font-heading text-xl mb-4 text-terracotta-light">Navigation</h3>
           <ul className="space-y-2 text-sm opacity-80 font-body">
             <li><Link to="/" className="hover:text-terracotta transition-colors">Home</Link></li>
             <li><Link to="/rooms" className="hover:text-terracotta transition-colors">Our Rooms</Link></li>
@@ -23,7 +23,7 @@ export default function Footer() {
         </div>
         
         <div>
-          <h3 className="font-heading text-xl mb-4 text-terracotta">Contact</h3>
+          <h3 className="font-heading text-xl mb-4 text-terracotta-light">Contact</h3>
           <ul className="space-y-2 text-sm opacity-80 font-body">
             <li>123 Derb Lalla, Medina</li>
             <li>Marrakech, Morocco</li>
@@ -33,7 +33,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <h3 className="font-heading text-xl mb-4 text-terracotta">Follow Us</h3>
+          <h3 className="font-heading text-xl mb-4 text-terracotta-light">Follow Us</h3>
           <div className="flex space-x-4 opacity-80">
             <a href="#" className="hover:text-terracotta transition-colors">Instagram</a>
             <a href="#" className="hover:text-terracotta transition-colors">Facebook</a>
