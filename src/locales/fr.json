@@ -104,5 +104,43 @@
     "description": "Un sanctuaire de pureté et de sérénité au cœur de la Médina. Découvrez la chaleur authentique de l'hospitalité marocaine.",
     "contact": "Contact",
     "rights": "© {{year}} Riad Dar Safaa. Tous droits réservés."
+  },
+  "amenities_page": {
+    "title": "Nos Équipements",
+    "subtitle": "Découvrez les services et installations exclusifs conçus pour rendre votre séjour inoubliable.",
+    "pool": "Bassin Paisible",
+    "pool_desc": "Rafraîchissez-vous dans notre bassin traditionnel orné de zelliges, une oasis de sérénité au cœur du patio.",
+    "rooftop": "Toit-Terrasse Panoramique",
+    "rooftop_desc": "Profitez d'un petit-déjeuner ou d'un thé à la menthe au coucher du soleil avec une vue imprenable sur la médina.",
+    "breakfast": "Petit-Déjeuner Inclus",
+    "breakfast_desc": "Un assortiment quotidien de pâtisseries marocaines fraîches et de délices servis où vous le souhaitez.",
+    "spa": "Hammam Traditionnel",
+    "spa_desc": "Vivez le bien-être marocain authentique avec notre hammam privé et nos services de massage."
+  },
+  "about_page": {
+    "title": "La Maison Safaa",
+    "subtitle": "Un héritage de l'hospitalité marocaine, magnifiquement préservé.",
+    "story_title": "Notre Histoire",
+    "story_desc1": "Dar Safaa a été construite au XVIIIe siècle comme demeure privée pour une noble famille de marchands. Aujourd'hui, elle témoigne de la beauté intemporelle de l'artisanat marocain traditionnel.",
+    "story_desc2": "Chaque panneau en bois de cèdre sculpté et chaque zellige raconte l'histoire de notre héritage. Nous vous invitons à découvrir la chaleur et l'élégance de ces murs.",
+    "philosophy_title": "Notre Philosophie",
+    "philosophy_desc": "Le vrai luxe réside dans la tranquillité et l'attention personnalisée. À Dar Safaa, nous anticipons vos besoins pour vous offrir un séjour majestueux où vous vous sentirez comme chez vous."
+  },
+  "contact_page": {
+    "title": "Nous Contacter",
+    "subtitle": "Nous sommes là pour vous aider avec vos réservations, vos demandes spéciales ou toute autre question.",
+    "form": {
+      "name": "Votre Nom",
+      "email": "Adresse E-mail",
+      "message": "Message",
+      "submit": "Envoyer le Message",
+      "success": "Votre message a été envoyé avec succès. Nous vous répondrons sous peu.",
+      "error": "Veuillez remplir tous les champs obligatoires."
+    },
+    "faq_title": "Foire Aux Questions",
+    "find_us": "Nous Trouver",
+    "address": "123 Derb Lalla, Médina, Marrakech, Maroc",
+    "phone": "+212 524 123 456",
+    "email": "info@darsafaa.com"
   }
 }

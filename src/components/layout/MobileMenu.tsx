@@ -27,9 +27,9 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   const links = [
     { name: t('nav.home'), path: '/' },
     { name: t('nav.rooms'), path: '/rooms' },
-    { name: t('nav.amenities'), path: '#' },
-    { name: t('nav.about'), path: '#' },
-    { name: t('nav.contact'), path: '#' },
+    { name: t('nav.amenities'), path: '/amenities' },
+    { name: t('nav.about'), path: '/about' },
+    { name: t('nav.contact'), path: '/contact' },
   ];
 
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;

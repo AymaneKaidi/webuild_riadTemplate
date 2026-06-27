@@ -28,9 +28,9 @@ export default function Footer() {
         <div>
           <h4 className="font-body text-xs uppercase tracking-widest text-teal-light mb-6 text-start">{t('nav.about')}</h4>
           <ul className="space-y-4 font-body text-sm text-sand/70 text-start">
-            <li><a href="#" className="hover:text-terracotta transition-colors">{t('nav.about')}</a></li>
-            <li><a href="#" className="hover:text-terracotta transition-colors">{t('nav.amenities')}</a></li>
-            <li><a href="#" className="hover:text-terracotta transition-colors">{t('nav.contact')}</a></li>
+            <li><Link to="/about" className="hover:text-terracotta transition-colors">{t('nav.about')}</Link></li>
+            <li><Link to="/amenities" className="hover:text-terracotta transition-colors">{t('nav.amenities')}</Link></li>
+            <li><Link to="/contact" className="hover:text-terracotta transition-colors">{t('nav.contact')}</Link></li>
           </ul>
         </div>
 

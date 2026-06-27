@@ -104,5 +104,43 @@
     "description": "A sanctuary of purity and serenity in the heart of the Medina. Experience the authentic warmth of Moroccan hospitality.",
     "contact": "Contact",
     "rights": "© {{year}} Dar Safaa Riad. All rights reserved."
+  },
+  "amenities_page": {
+    "title": "Our Amenities",
+    "subtitle": "Discover the exclusive services and facilities designed to make your stay unforgettable.",
+    "pool": "Tranquil Plunge Pool",
+    "pool_desc": "Cool off in our traditional zellige-tiled plunge pool, an oasis of serenity in the heart of the courtyard.",
+    "rooftop": "Panoramic Rooftop",
+    "rooftop_desc": "Enjoy breakfast or a sunset mint tea with unobstructed views of the Medina and Atlas Mountains.",
+    "breakfast": "Complimentary Breakfast",
+    "breakfast_desc": "A daily spread of fresh Moroccan pastries, fruits, and delicacies served wherever you please.",
+    "spa": "Traditional Hammam",
+    "spa_desc": "Experience authentic Moroccan wellness with our private in-house hammam and massage services."
+  },
+  "about_page": {
+    "title": "The House of Safaa",
+    "subtitle": "A legacy of Moroccan hospitality, beautifully preserved.",
+    "story_title": "Our Story",
+    "story_desc1": "Dar Safaa was built in the 18th century as a private mansion for a noble merchant family. Today, it stands as a testament to the enduring beauty of traditional Moroccan craftsmanship.",
+    "story_desc2": "Every carved cedar wood panel and zellige tile tells a story of our heritage. We invite you to experience the warmth and elegance that has graced these walls for generations.",
+    "philosophy_title": "Our Philosophy",
+    "philosophy_desc": "True luxury is found in tranquility and personalized care. At Dar Safaa, we anticipate your needs before you even realize them, ensuring a stay that feels both majestic and like coming home."
+  },
+  "contact_page": {
+    "title": "Contact Us",
+    "subtitle": "We are here to assist with reservations, special requests, or any questions you may have.",
+    "form": {
+      "name": "Your Name",
+      "email": "Email Address",
+      "message": "Message",
+      "submit": "Send Message",
+      "success": "Your message has been sent successfully. We will reply shortly.",
+      "error": "Please fill in all required fields."
+    },
+    "faq_title": "Frequently Asked Questions",
+    "find_us": "Find Us",
+    "address": "123 Derb Lalla, Medina, Marrakech, Morocco",
+    "phone": "+212 524 123 456",
+    "email": "info@darsafaa.com"
   }
 }

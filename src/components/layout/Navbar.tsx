@@ -42,9 +42,9 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-x-8 font-body text-sm uppercase tracking-widest">
           <Link to="/" className="hover:text-terracotta transition-colors">{t('nav.home')}</Link>
           <Link to="/rooms" className="hover:text-terracotta transition-colors">{t('nav.rooms')}</Link>
-          <a href="#" className="hover:text-terracotta transition-colors">{t('nav.amenities')}</a>
-          <a href="#" className="hover:text-terracotta transition-colors">{t('nav.about')}</a>
-          <a href="#" className="hover:text-terracotta transition-colors">{t('nav.contact')}</a>
+          <Link to="/amenities" className="hover:text-terracotta transition-colors">{t('nav.amenities')}</Link>
+          <Link to="/about" className="hover:text-terracotta transition-colors">{t('nav.about')}</Link>
+          <Link to="/contact" className="hover:text-terracotta transition-colors">{t('nav.contact')}</Link>
         </div>
 
         <div className="flex items-center gap-x-4">

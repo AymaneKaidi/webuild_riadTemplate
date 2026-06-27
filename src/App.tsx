@@ -5,6 +5,9 @@ import ScrollToTop from './components/layout/ScrollToTop';
 import Home from './pages/Home';
 import Rooms from './pages/Rooms';
 import RoomDetailPage from './pages/RoomDetailPage';
+import AmenitiesPage from './pages/AmenitiesPage';
+import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
 import { WishlistProvider } from './context/WishlistContext';
 import { useEffect } from 'react';
 import Lenis from 'lenis';
@@ -59,6 +62,9 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/rooms" element={<Rooms />} />
               <Route path="/room/:slug" element={<RoomDetailPage />} />
+              <Route path="/amenities" element={<AmenitiesPage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/contact" element={<ContactPage />} />
             </Routes>
           </main>
           <Footer />

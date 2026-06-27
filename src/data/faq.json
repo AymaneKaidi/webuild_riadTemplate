@@ -1,22 +1,62 @@
 [
   {
-    "question": "Where is Dar Safaa located?",
-    "answer": "Dar Safaa is located in the heart of the historic Medina, just a 10-minute walk from the main square. We offer a peaceful oasis away from the bustling streets."
+    "question": {
+      "en": "Where is Dar Safaa located?",
+      "fr": "Où se trouve Dar Safaa ?",
+      "ar": "أين تقع دار صفاء؟"
+    },
+    "answer": {
+      "en": "Dar Safaa is located in the heart of the historic Medina, just a 10-minute walk from the main square. We offer a peaceful oasis away from the bustling streets.",
+      "fr": "Dar Safaa est situé au cœur de la médina historique, à seulement 10 minutes à pied de la place principale. Nous offrons une oasis de paix loin des rues animées.",
+      "ar": "تقع دار صفاء في قلب المدينة العتيقة التاريخية، على بعد 10 دقائق فقط سيراً على الأقدام من الساحة الرئيسية. نحن نوفر واحة هادئة بعيداً عن الشوارع الصاخبة."
+    }
   },
   {
-    "question": "Do you provide airport transfers?",
-    "answer": "Yes, we offer private luxury airport transfers. Our driver will meet you at the airport and assist with your luggage directly to the riad's doors."
+    "question": {
+      "en": "Do you provide airport transfers?",
+      "fr": "Proposez-vous des transferts aéroport ?",
+      "ar": "هل توفرون خدمات النقل من وإلى المطار؟"
+    },
+    "answer": {
+      "en": "Yes, we offer private luxury airport transfers. Our driver will meet you at the airport and assist with your luggage directly to the riad's doors.",
+      "fr": "Oui, nous proposons des transferts privés de luxe depuis et vers l'aéroport. Notre chauffeur vous accueillera à l'aéroport et vous aidera avec vos bagages jusqu'aux portes du riad.",
+      "ar": "نعم، نقدم خدمات نقل خاصة وفاخرة من وإلى المطار. سيقابلك سائقنا في المطار ويساعدك في حمل أمتعتك حتى أبواب الرياض."
+    }
   },
   {
-    "question": "Is breakfast included in the room rate?",
-    "answer": "Absolutely. A complimentary, traditional Moroccan breakfast is served daily. You may choose to enjoy it in your room, the courtyard, or on our rooftop terrace."
+    "question": {
+      "en": "Is breakfast included in the room rate?",
+      "fr": "Le petit-déjeuner est-il inclus dans le prix de la chambre ?",
+      "ar": "هل الإفطار مشمول في سعر الغرفة؟"
+    },
+    "answer": {
+      "en": "Absolutely. A complimentary, traditional Moroccan breakfast is served daily. You may choose to enjoy it in your room, the courtyard, or on our rooftop terrace.",
+      "fr": "Absolument. Un petit-déjeuner marocain traditionnel et gratuit est servi tous les jours. Vous pouvez choisir de le déguster dans votre chambre, dans le patio ou sur notre toit-terrasse.",
+      "ar": "بالتأكيد. يتم تقديم إفطار مغربي تقليدي مجاني يومياً. يمكنك اختيار الاستمتاع به في غرفتك، أو في الفناء الداخلي، أو على شرفة السطح."
+    }
   },
   {
-    "question": "Can you accommodate dietary restrictions?",
-    "answer": "Yes, our chefs are happy to accommodate vegetarian, vegan, gluten-free, and other dietary requirements. Please let us know in advance of your stay."
+    "question": {
+      "en": "Can you accommodate dietary restrictions?",
+      "fr": "Pouvez-vous répondre aux restrictions alimentaires ?",
+      "ar": "هل يمكنكم تلبية المتطلبات الغذائية الخاصة؟"
+    },
+    "answer": {
+      "en": "Yes, our chefs are happy to accommodate vegetarian, vegan, gluten-free, and other dietary requirements. Please let us know in advance of your stay.",
+      "fr": "Oui, nos chefs sont ravis de s'adapter aux régimes végétariens, végétaliens, sans gluten et autres exigences alimentaires. Veuillez nous en informer avant votre séjour.",
+      "ar": "نعم، يسعد طهاتنا تلبية المتطلبات الغذائية النباتية والخالية من الغلوتين وغيرها من المتطلبات الخاصة. يرجى إعلامنا بذلك قبل إقامتك."
+    }
   },
   {
-    "question": "Are children welcome at the riad?",
-    "answer": "While we welcome families in our Atlas Family Suite, the riad is primarily designed as a tranquil retreat for adults. Please contact us directly to discuss accommodating young children."
+    "question": {
+      "en": "Are children welcome at the riad?",
+      "fr": "Les enfants sont-ils les bienvenus au riad ?",
+      "ar": "هل يُسمح باصطحاب الأطفال في الرياض؟"
+    },
+    "answer": {
+      "en": "While we welcome families in our Atlas Family Suite, the riad is primarily designed as a tranquil retreat for adults. Please contact us directly to discuss accommodating young children.",
+      "fr": "Bien que nous accueillions les familles dans notre Suite Familiale Atlas, le riad est principalement conçu comme une retraite tranquille pour les adultes. Veuillez nous contacter directement pour discuter de l'accueil de jeunes enfants.",
+      "ar": "رغم أننا نرحب بالعائلات في جناح أطلس العائلي، إلا أن الرياض مصمم في المقام الأول كملاذ هادئ للبالغين. يرجى الاتصال بنا مباشرة لمناقشة إمكانية استضافة الأطفال الصغار."
+    }
   }
 ]
