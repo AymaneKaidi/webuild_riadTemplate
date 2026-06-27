@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'motion/react';
 import { X, CheckCircle2 } from 'lucide-react';
 
 interface BookingModalProps {
@@ -15,7 +15,7 @@ interface BookingModalProps {
 export default function BookingModal({ isOpen, onClose, room }: BookingModalProps) {
   const [isSuccess, setIsSuccess] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
-  
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -80,7 +80,7 @@ export default function BookingModal({ isOpen, onClose, room }: BookingModalProp
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const newErrors: Record<string, string> = {};
-    
+
     // Validate all fields
     Object.keys(formData).forEach(key => {
       if (key !== 'message' && key !== 'phone') {
@@ -99,7 +99,7 @@ export default function BookingModal({ isOpen, onClose, room }: BookingModalProp
     console.log('Room:', room.name);
     console.log('Details:', formData);
     console.log('-----------------------------');
-    
+
     setIsSuccess(true);
   };
 
@@ -114,14 +114,14 @@ export default function BookingModal({ isOpen, onClose, room }: BookingModalProp
             onClick={onClose}
             className="absolute inset-0 bg-charcoal/60 backdrop-blur-sm"
           />
-          
+
           <motion.div
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             className="relative w-full max-w-2xl bg-white rounded shadow-2xl overflow-hidden flex flex-col max-h-[90vh]"
           >
-            <button 
+            <button
               onClick={onClose}
               className="absolute top-4 right-4 p-2 text-charcoal/60 hover:text-charcoal bg-white/50 rounded-full z-10 transition-colors"
             >
@@ -130,7 +130,7 @@ export default function BookingModal({ isOpen, onClose, room }: BookingModalProp
 
             {isSuccess ? (
               <div className="p-12 flex flex-col items-center justify-center text-center h-full min-h-[400px]">
-                <motion.div 
+                <motion.div
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   transition={{ type: 'spring', bounce: 0.5 }}
@@ -142,7 +142,7 @@ export default function BookingModal({ isOpen, onClose, room }: BookingModalProp
                   Thank you, {formData.name} — we'll confirm your stay for the <span className="font-semibold text-charcoal">{room.name}</span> shortly.
                 </p>
                 {/* Note: This is a demo-only success state with no backend connection */}
-                <button 
+                <button
                   onClick={onClose}
                   className="px-8 py-3 bg-charcoal text-white font-body uppercase tracking-widest text-sm hover:bg-charcoal/90 transition-colors"
                 >
@@ -166,27 +166,27 @@ export default function BookingModal({ isOpen, onClose, room }: BookingModalProp
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
                         <label className="block font-body text-sm text-charcoal mb-2">Full Name *</label>
-                        <input 
+                        <input
                           type="text" name="name"
                           value={formData.name} onChange={handleChange} onBlur={handleBlur}
                           className={`w-full p-3 bg-sand/30 border ${errors.name ? 'border-red-400' : 'border-charcoal/20'} focus:outline-none focus:border-terracotta transition-colors font-body`}
                         />
                         {errors.name && <p className="text-red-500 text-xs mt-1 font-body">{errors.name}</p>}
                       </div>
-                      
+
                       <div>
                         <label className="block font-body text-sm text-charcoal mb-2">Email Address *</label>
-                        <input 
+                        <input
                           type="email" name="email"
                           value={formData.email} onChange={handleChange} onBlur={handleBlur}
                           className={`w-full p-3 bg-sand/30 border ${errors.email ? 'border-red-400' : 'border-charcoal/20'} focus:outline-none focus:border-terracotta transition-colors font-body`}
                         />
                         {errors.email && <p className="text-red-500 text-xs mt-1 font-body">{errors.email}</p>}
                       </div>
-                      
+
                       <div>
                         <label className="block font-body text-sm text-charcoal mb-2">Check-in Date *</label>
-                        <input 
+                        <input
                           type="date" name="checkIn"
                           value={formData.checkIn} onChange={handleChange} onBlur={handleBlur}
                           className={`w-full p-3 bg-sand/30 border ${errors.checkIn ? 'border-red-400' : 'border-charcoal/20'} focus:outline-none focus:border-terracotta transition-colors font-body`}
@@ -196,7 +196,7 @@ export default function BookingModal({ isOpen, onClose, room }: BookingModalProp
 
                       <div>
                         <label className="block font-body text-sm text-charcoal mb-2">Check-out Date *</label>
-                        <input 
+                        <input
                           type="date" name="checkOut"
                           value={formData.checkOut} onChange={handleChange} onBlur={handleBlur}
                           className={`w-full p-3 bg-sand/30 border ${errors.checkOut ? 'border-red-400' : 'border-charcoal/20'} focus:outline-none focus:border-terracotta transition-colors font-body`}
@@ -206,7 +206,7 @@ export default function BookingModal({ isOpen, onClose, room }: BookingModalProp
 
                       <div>
                         <label className="block font-body text-sm text-charcoal mb-2">Phone (Optional)</label>
-                        <input 
+                        <input
                           type="tel" name="phone"
                           value={formData.phone} onChange={handleChange}
                           className="w-full p-3 bg-sand/30 border border-charcoal/20 focus:outline-none focus:border-terracotta transition-colors font-body"
@@ -215,7 +215,7 @@ export default function BookingModal({ isOpen, onClose, room }: BookingModalProp
 
                       <div>
                         <label className="block font-body text-sm text-charcoal mb-2">Guests *</label>
-                        <input 
+                        <input
                           type="number" name="guests" min="1"
                           value={formData.guests} onChange={handleChange}
                           className="w-full p-3 bg-sand/30 border border-charcoal/20 focus:outline-none focus:border-terracotta transition-colors font-body"
@@ -225,7 +225,7 @@ export default function BookingModal({ isOpen, onClose, room }: BookingModalProp
 
                     <div>
                       <label className="block font-body text-sm text-charcoal mb-2">Special Requests (Optional)</label>
-                      <textarea 
+                      <textarea
                         name="message" rows={3}
                         value={formData.message} onChange={handleChange}
                         className="w-full p-3 bg-sand/30 border border-charcoal/20 focus:outline-none focus:border-terracotta transition-colors font-body resize-none"
@@ -233,9 +233,9 @@ export default function BookingModal({ isOpen, onClose, room }: BookingModalProp
                     </div>
                   </form>
                 </div>
-                
+
                 <div className="p-6 border-t border-charcoal/10 bg-sand/20 shrink-0">
-                  <button 
+                  <button
                     type="submit" form="booking-form"
                     className="w-full py-4 bg-terracotta text-white font-body uppercase tracking-widest text-sm hover:bg-terracotta-dark transition-colors"
                   >

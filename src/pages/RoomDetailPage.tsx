@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  ArrowLeft, Heart, Star, Users, BedDouble, 
+import { motion } from 'motion/react';
+import {
+  ArrowLeft, Heart, Star, Users, BedDouble,
   Sun, Droplets, Flame, Wind, Sofa, Eye, Bell, Trees
 } from 'lucide-react';
 import roomsData from '../data/rooms.json';
@@ -71,14 +71,14 @@ export default function RoomDetailPage() {
           <span>Back to Rooms</span>
         </Link>
 
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
           {/* Main Layout */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
-            
+
             {/* Gallery Section */}
             <div className="lg:col-span-7">
               <div className="aspect-[4/3] bg-charcoal/5 rounded-sm relative overflow-hidden mb-4">
@@ -90,7 +90,7 @@ export default function RoomDetailPage() {
                 {[1, 2, 3].map(i => (
                   <div key={i} className="aspect-square bg-charcoal/5 rounded-sm relative overflow-hidden">
                     <div className="absolute inset-0 flex items-center justify-center text-charcoal/20 font-body text-xs tracking-widest uppercase text-center p-2">
-                      Gallery<br/>Image {i}
+                      Gallery<br />Image {i}
                     </div>
                   </div>
                 ))}
@@ -101,7 +101,7 @@ export default function RoomDetailPage() {
             <div className="lg:col-span-5 flex flex-col">
               <div className="flex justify-between items-start mb-4">
                 <h1 className="font-heading text-4xl md:text-5xl text-teal">{room.name}</h1>
-                <button 
+                <button
                   onClick={() => toggleWishlist(room.id)}
                   className="p-3 bg-white shadow-sm rounded-full hover:shadow-md transition-all shrink-0 ml-4"
                 >
@@ -147,7 +147,7 @@ export default function RoomDetailPage() {
                 </div>
               </div>
 
-              <button 
+              <button
                 onClick={() => setIsBookingOpen(true)}
                 className="w-full py-4 bg-terracotta text-white font-body uppercase tracking-widest text-sm hover:bg-terracotta-dark transition-colors mt-auto"
               >
@@ -167,7 +167,7 @@ export default function RoomDetailPage() {
       </div>
 
       {/* Booking Modal */}
-      <BookingModal 
+      <BookingModal
         isOpen={isBookingOpen}
         onClose={() => setIsBookingOpen(false)}
         room={{ name: room.name, price: room.price, currency: room.currency }}

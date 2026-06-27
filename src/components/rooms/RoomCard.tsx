@@ -1,6 +1,6 @@
 import { Heart, Star, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { useWishlist } from '../../context/WishlistContext';
 
 interface Room {
@@ -27,7 +27,7 @@ export default function RoomCard({ room }: { room: Room }) {
 
   return (
     <motion.div whileHover={{ y: -5 }} className="h-full">
-      <Link 
+      <Link
         to={`/room/${room.slug}`}
         className="group flex flex-col h-full bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 cursor-pointer"
       >
@@ -36,7 +36,7 @@ export default function RoomCard({ room }: { room: Room }) {
           <div className="absolute inset-0 flex items-center justify-center text-charcoal/20 font-body text-sm tracking-widest uppercase">
             Image Preview
           </div>
-          <button 
+          <button
             onClick={handleToggle}
             className="absolute top-4 right-4 z-10 p-2 bg-white/80 backdrop-blur-sm rounded-full hover:bg-white transition-colors"
           >
@@ -49,7 +49,7 @@ export default function RoomCard({ room }: { room: Room }) {
           <div className="flex justify-between items-start mb-2">
             <h3 className="font-heading text-xl md:text-2xl text-teal">{room.name}</h3>
           </div>
-          
+
           <div className="flex items-center space-x-4 text-xs md:text-sm font-body text-charcoal/70 mb-4">
             <div className="flex items-center space-x-1">
               <Users className="w-4 h-4" />

@@ -1,4 +1,4 @@
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'motion/react';
 import { X, Trash2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useWishlist } from '../../context/WishlistContext';
@@ -39,7 +39,7 @@ export default function WishlistDrawer({ isOpen, onClose }: WishlistDrawerProps)
           >
             <div className="flex items-center justify-between p-6 border-b border-charcoal/10">
               <h2 className="font-heading text-2xl text-teal">Your Wishlist</h2>
-              <button 
+              <button
                 onClick={onClose}
                 className="p-2 hover:bg-charcoal/5 rounded-full transition-colors text-charcoal/70"
               >
@@ -52,7 +52,7 @@ export default function WishlistDrawer({ isOpen, onClose }: WishlistDrawerProps)
                 <div className="flex flex-col items-center justify-center h-full text-charcoal/50 font-body space-y-4">
                   <HeartIconEmpty />
                   <p>Your wishlist is empty.</p>
-                  <button 
+                  <button
                     onClick={onClose}
                     className="text-terracotta underline hover:text-terracotta-dark"
                   >
@@ -67,14 +67,14 @@ export default function WishlistDrawer({ isOpen, onClose }: WishlistDrawerProps)
                     </div>
                     <div className="p-4 flex-grow flex flex-col">
                       <div className="flex justify-between items-start">
-                        <Link 
+                        <Link
                           to={`/room/${room.slug}`}
                           onClick={onClose}
                           className="font-heading text-lg text-teal hover:text-terracotta transition-colors line-clamp-1 mr-2"
                         >
                           {room.name}
                         </Link>
-                        <button 
+                        <button
                           onClick={() => removeFromWishlist(room.id)}
                           className="text-charcoal/40 hover:text-terracotta transition-colors shrink-0"
                           title="Remove"
@@ -82,12 +82,12 @@ export default function WishlistDrawer({ isOpen, onClose }: WishlistDrawerProps)
                           <Trash2 className="w-4 h-4" />
                         </button>
                       </div>
-                      
+
                       <div className="mt-auto pt-4 flex items-center justify-between font-body">
                         <div>
                           <span className="font-medium text-charcoal">{room.price} {room.currency}</span>
                         </div>
-                        <Link 
+                        <Link
                           to={`/room/${room.slug}`}
                           onClick={onClose}
                           className="text-xs uppercase tracking-widest text-terracotta hover:text-terracotta-dark font-semibold"
@@ -110,7 +110,7 @@ export default function WishlistDrawer({ isOpen, onClose }: WishlistDrawerProps)
 function HeartIconEmpty() {
   return (
     <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="opacity-40">
-      <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+      <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
     </svg>
   );
 }

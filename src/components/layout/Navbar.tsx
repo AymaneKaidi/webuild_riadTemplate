@@ -1,12 +1,14 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Heart, Globe } from 'lucide-react';
+import { Heart, Globe, Menu } from 'lucide-react';
 import { useWishlist } from '../../context/WishlistContext';
 import WishlistDrawer from './WishlistDrawer';
+import MobileMenu from './MobileMenu';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
   const isHome = location.pathname === '/';
   const { state } = useWishlist();
@@ -28,7 +30,7 @@ export default function Navbar() {
         <Link to="/" className={`font-heading text-3xl tracking-wide ${logoColor}`}>
           Dar Safaa
         </Link>
-        
+
         <div className="hidden md:flex items-center space-x-8 font-body text-sm uppercase tracking-widest">
           <Link to="/" className="hover:text-terracotta transition-colors">Home</Link>
           <Link to="/rooms" className="hover:text-terracotta transition-colors">Rooms</Link>
@@ -42,7 +44,7 @@ export default function Navbar() {
             <Globe className="w-5 h-5" />
             <span className="text-xs font-medium uppercase">EN</span>
           </div>
-          <button 
+          <button
             onClick={() => setIsDrawerOpen(true)}
             className="relative hover:text-terracotta transition-colors"
           >
@@ -53,12 +55,24 @@ export default function Navbar() {
               </span>
             )}
           </button>
+
+          <button 
+            onClick={() => setIsMobileMenuOpen(true)}
+            className="md:hidden ml-4 p-1 hover:text-terracotta transition-colors"
+          >
+            <Menu className="w-6 h-6" />
+          </button>
         </div>
       </div>
 
-      <WishlistDrawer 
-        isOpen={isDrawerOpen} 
-        onClose={() => setIsDrawerOpen(false)} 
+      <WishlistDrawer
+        isOpen={isDrawerOpen}
+        onClose={() => setIsDrawerOpen(false)}
+      />
+
+      <MobileMenu 
+        isOpen={isMobileMenuOpen}
+        onClose={() => setIsMobileMenuOpen(false)}
       />
     </nav>
   );
