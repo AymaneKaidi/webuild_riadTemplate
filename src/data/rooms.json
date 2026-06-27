@@ -23,7 +23,7 @@
       "ar": "عش تجربة فخامة لا تُضاهى في الجناح الملكي الأندلس. يوفر هذا الجناح الفسيح إطلالات خلابة على الفناء الداخلي، وسريراً ملكياً كبيراً مزيناً بأرقى البياضات، وحماماً داخلياً مزدان بالتدلاكت والزليج التقليدي. استرخِ في منطقة الجلوس الخاصة بك أو استمتع بشرفتك الخاصة."
     },
     "amenities": ["King Bed", "Private Terrace", "Plunge Pool", "Fireplace", "Air Conditioning"],
-    "images": ["/placeholder.jpg"],
+    "images": ["/images/room_1.png"],
     "featured": true
   },
   {
@@ -50,7 +50,7 @@
       "ar": "غرفة فناء الياسمين هي ملاذ هادئ يقع في الطابق الأرضي. استيقظ على الأصوات الرقيقة للنافورة المركزية ورائحة الياسمين العطرة. تتميز الغرفة بمفروشات مغربية أصيلة، وتفاصيل من خشب الأرز المنحوت يدوياً، وحمام فاخر مكسو بالتدلاكت."
     },
     "amenities": ["Queen Bed", "Courtyard Access", "Rain Shower", "Air Conditioning"],
-    "images": ["/placeholder.jpg"],
+    "images": ["/images/room_2.png"],
     "featured": true
   },
   {
@@ -77,7 +77,7 @@
       "ar": "انغمس في أحضان الطبيعة في جناح حديقة الواحة. بفضل نوافذه الكبيرة التي توفر إطلالات بانورامية على حدائق الرياض النباتية ومسبحه، يغمر هذا الجناح ضوء طبيعي ساحر. يحتوي على سرير ملكي، ومنطقة جلوس مريحة مع أريكة تتحول إلى سرير، وشرفة خاصة."
     },
     "amenities": ["King Bed", "Sofa Bed", "Garden View", "Balcony", "Air Conditioning"],
-    "images": ["/placeholder.jpg"],
+    "images": ["/images/room_3.png"],
     "featured": true
   },
   {
@@ -104,7 +104,7 @@
       "ar": "بنتهاوس إطلالة المدينة هو جوهرة تاج دار صفاء. يقع في الطابق العلوي، ويضم شرفة خاصة على السطح توفر إطلالات غير محجوبة على أفق المدينة وجبال الأطلس. يشتمل على غرفتي نوم، وغرفة معيشة فسيحة، وخدمة كبير خدم مخصصة."
     },
     "amenities": ["Two King Beds", "Private Rooftop", "Panoramic Views", "Butler Service", "Fireplace"],
-    "images": ["/placeholder.jpg"],
+    "images": ["/images/room_4.png"],
     "featured": false
   },
   {
@@ -131,7 +131,7 @@
       "ar": "توفر غرفة الزعفران الديلوكس أجواء دافئة وجذابة بفضل لوحة ألوانها الغنية والفوانيس النحاسية المعقدة. تقع في الطابق الأول، وتوفر ملاذاً هادئاً يضم سريراً مزدوجاً ووثيراً وحماماً داخلياً بتفاصيل بديعة."
     },
     "amenities": ["Queen Bed", "Medina View", "Rain Shower", "Air Conditioning"],
-    "images": ["/placeholder.jpg"],
+    "images": ["/images/room_5.png"],
     "featured": false
   },
   {
@@ -158,7 +158,7 @@
       "ar": "تُعد غرفة النخيل بجانب المسبح مثالية لعشاق الشمس، حيث توفر وصولاً مباشراً إلى المسبح الرئيسي للرياض. تتميز الغرفة بجدران التدلاكت المنعشة، وسرير ملكي مريح، وفناء خاص مظلل."
     },
     "amenities": ["King Bed", "Direct Pool Access", "Private Patio", "Air Conditioning"],
-    "images": ["/placeholder.jpg"],
+    "images": ["/images/room_4.png"],
     "featured": false
   },
   {
@@ -185,7 +185,7 @@
       "ar": "صُمم جناح أطلس العائلي خصيصاً للعائلات، ويتكون من غرفتين متصلتين ومنطقة معيشة مركزية مشتركة. يوفر مساحة واسعة، ووسائل راحة فاخرة، وإطلالات على كل من الفناء الداخلي والمدينة العتيقة المحيطة به."
     },
     "amenities": ["1 King Bed", "2 Twin Beds", "Sofa Bed", "Two Bathrooms", "Living Area"],
-    "images": ["/placeholder.jpg"],
+    "images": ["/images/room_5.png"],
     "featured": false
   },
   {
@@ -212,7 +212,7 @@
       "ar": "غرفة بستان الحمضيات هي ملاذ منعزل يقع وسط أشجار البرتقال والليمون العطرة. توفر الغرفة خصوصية استثنائية، وسريراً مزدوجاً مريحاً، وتصميماً ريفياً ساحراً يعكس التراث الزراعي للمنطقة."
     },
     "amenities": ["Queen Bed", "Garden View", "Rain Shower", "Air Conditioning"],
-    "images": ["/placeholder.jpg"],
+    "images": ["/images/hero_bg.png"],
     "featured": false
   }
 ]

@@ -86,9 +86,17 @@ export default function RoomDetailPage() {
             {/* Gallery Section */}
             <div className="lg:col-span-7">
               <div className="aspect-[4/3] bg-charcoal/5 rounded-sm relative overflow-hidden mb-4">
-                <div className="absolute inset-0 flex items-center justify-center text-charcoal/20 font-body text-sm tracking-widest uppercase">
-                  {t('common.main_image_preview')}
-                </div>
+                {room.images && room.images[0] !== '/placeholder.jpg' ? (
+                  <img 
+                    src={room.images[0]} 
+                    alt={roomName} 
+                    className="w-full h-full object-cover" 
+                  />
+                ) : (
+                  <div className="absolute inset-0 flex items-center justify-center text-charcoal/20 font-body text-sm tracking-widest uppercase">
+                    {t('common.main_image_preview')}
+                  </div>
+                )}
               </div>
               <div className="grid grid-cols-3 gap-4">
                 {[1, 2, 3].map(i => (

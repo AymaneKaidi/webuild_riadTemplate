@@ -20,6 +20,7 @@ interface Room {
   rating: number;
   guestCount: number;
   shortDescription: LocalizedString;
+  images: string[];
 }
 
 export default function RoomCard({ room }: { room: Room }) {
@@ -44,9 +45,17 @@ export default function RoomCard({ room }: { room: Room }) {
       >
         {/* Image Placeholder */}
         <div className="relative aspect-[4/3] bg-charcoal/5 overflow-hidden">
-          <div className="absolute inset-0 flex items-center justify-center text-charcoal/20 font-body text-sm tracking-widest uppercase">
-            {t('common.image_preview')}
-          </div>
+          {room.images && room.images[0] !== '/placeholder.jpg' ? (
+            <img 
+              src={room.images[0]} 
+              alt={roomName} 
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+            />
+          ) : (
+            <div className="absolute inset-0 flex items-center justify-center text-charcoal/20 font-body text-sm tracking-widest uppercase">
+              {t('common.image_preview')}
+            </div>
+          )}
           <button
             onClick={handleToggle}
             className="absolute top-4 end-4 z-10 p-2 bg-white/80 backdrop-blur-sm rounded-full hover:bg-white transition-colors"
@@ -62,7 +71,7 @@ export default function RoomCard({ room }: { room: Room }) {
           </div>
 
           <div className="flex items-center gap-x-4 text-xs md:text-sm font-body text-charcoal/70 mb-4">
-            <div className="flex items-center gap-x-1">
+            <div className="hidden md:flex items-center gap-x-1">
               <Users className="w-4 h-4 text-terracotta" />
               <span className="text-xs uppercase tracking-widest">{t('rooms.guests', { count: room.guestCount })}</span>
             </div>
@@ -72,17 +81,17 @@ export default function RoomCard({ room }: { room: Room }) {
             </div>
           </div>
 
-          <p className="font-body text-sm text-charcoal/80 mb-6 flex-grow line-clamp-2">
+          <p className="hidden md:block font-body text-sm text-charcoal/80 mb-6 flex-grow line-clamp-2">
             {shortDesc}
           </p>
 
-          <div className="mt-4 flex items-center justify-between">
+          <div className="mt-auto md:mt-4 flex flex-col xl:flex-row items-start xl:items-center justify-between gap-2">
             <div>
-              <span className="font-heading text-xl">{room.price} {room.currency}</span>
-              <span className="text-xs uppercase tracking-widest text-charcoal/60 ms-1">{t('rooms.per_night')}</span>
+              <span className="font-heading text-lg lg:text-xl">{room.price} {room.currency}</span>
+              <span className="text-[10px] lg:text-xs uppercase tracking-widest text-charcoal/60 ms-1">{t('rooms.per_night')}</span>
             </div>
-            <span className="text-xs uppercase tracking-widest text-terracotta group-hover:text-terracotta-dark font-semibold transition-colors">
-              {t('rooms.view_room')} →
+            <span className="text-[10px] lg:text-xs uppercase tracking-widest text-terracotta group-hover:text-terracotta-dark font-semibold transition-colors">
+              {t('rooms.view_room')} &rarr;
             </span>
           </div>
         </div>

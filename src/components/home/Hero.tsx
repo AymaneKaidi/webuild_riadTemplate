@@ -36,9 +36,9 @@ export default function Hero() {
       {/* Background layer for parallax */}
       <div 
          ref={bgRef}
-         className="absolute inset-0 w-full h-[120%] -top-[10%]"
+         className="absolute inset-0 w-full h-[120%] -top-[10%] bg-cover bg-center bg-no-repeat"
          style={{
-           background: 'linear-gradient(135deg, #18332F 0%, #7A3326 50%, #222525 100%)'
+           backgroundImage: 'url(/images/hero_bg.png)'
          }} 
       />
       {/* Decorative subtle overlay */}
@@ -63,9 +63,9 @@ export default function Hero() {
           >
             {t('hero.explore')}
           </Link>
-          <button className="px-8 py-4 bg-transparent border border-sand text-sand font-body uppercase tracking-widest text-sm hover:bg-sand hover:text-charcoal transition-colors">
+          <Link to="/contact" className="px-8 py-4 bg-transparent border border-sand text-sand font-body uppercase tracking-widest text-sm hover:bg-sand hover:text-charcoal transition-colors block text-center">
             {t('hero.book')}
-          </button>
+          </Link>
         </div>
       </div>
 

@@ -43,7 +43,7 @@ export default function AboutPage() {
         <div ref={sectionRef} className="space-y-24 text-start">
           <div className="reveal-item flex flex-col md:flex-row gap-12 items-center">
             <div className="w-full md:w-1/2 aspect-[4/3] bg-charcoal/5 rounded-sm relative overflow-hidden flex items-center justify-center">
-               <span className="font-body text-xs tracking-widest uppercase text-charcoal/20">{t('common.image')}</span>
+               <img src="/images/room_2.png" alt={t('about_page.story_title')} className="w-full h-full object-cover" />
             </div>
             <div className="w-full md:w-1/2 space-y-6">
               <h2 className="font-heading text-3xl text-teal">{t('about_page.story_title')}</h2>
@@ -58,7 +58,7 @@ export default function AboutPage() {
 
           <div className="reveal-item flex flex-col md:flex-row-reverse gap-12 items-center">
             <div className="w-full md:w-1/2 aspect-[4/3] bg-charcoal/5 rounded-sm relative overflow-hidden flex items-center justify-center">
-               <span className="font-body text-xs tracking-widest uppercase text-charcoal/20">{t('common.image')}</span>
+               <img src="/images/room_3.png" alt={t('about_page.philosophy_title')} className="w-full h-full object-cover" />
             </div>
             <div className="w-full md:w-1/2 space-y-6">
               <h2 className="font-heading text-3xl text-teal">{t('about_page.philosophy_title')}</h2>

@@ -40,6 +40,10 @@ export default function AmenitiesPage() {
           {t('amenities_page.subtitle')}
         </p>
 
+        <div className="w-full h-64 md:h-96 rounded-sm overflow-hidden mb-16 shadow-sm">
+          <img src="/images/room_1.png" alt={t('amenities_page.title')} className="w-full h-full object-cover" />
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {amenities.map((item, idx) => (
             <motion.div 
