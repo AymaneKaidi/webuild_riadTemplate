@@ -1,120 +1,216 @@
 [
   {
     "id": "1",
-    "name": "Suite Royale Al-Andalus",
+    "name": {
+      "en": "Suite Royale Al-Andalus",
+      "fr": "Suite Royale Al-Andalus",
+      "ar": "الجناح الملكي الأندلس"
+    },
     "slug": "suite-royale-al-andalus",
     "category": "suites",
     "price": 450,
     "currency": "MAD",
     "rating": 5.0,
     "guestCount": 2,
-    "shortDescription": "A majestic suite featuring original 18th-century zellige and a private plunge pool.",
-    "longDescription": "Experience unparalleled luxury in the Suite Royale Al-Andalus. This expansive suite offers stunning courtyard views, a grand king-size bed draped in fine linens, and an en-suite bathroom adorned with traditional tadelakt and zellige tiles. Relax in your private lounge area or step out to the private terrace.",
+    "shortDescription": {
+      "en": "A majestic suite featuring original 18th-century zellige and a private plunge pool.",
+      "fr": "Une suite majestueuse ornée de zelliges authentiques du 18ème siècle et dotée d'un bassin privé.",
+      "ar": "جناح مهيب يتميز بزليج أصيل من القرن الثامن عشر ومغطس خاص."
+    },
+    "longDescription": {
+      "en": "Experience unparalleled luxury in the Suite Royale Al-Andalus. This expansive suite offers stunning courtyard views, a grand king-size bed draped in fine linens, and an en-suite bathroom adorned with traditional tadelakt and zellige tiles. Relax in your private lounge area or step out to the private terrace.",
+      "fr": "Vivez un luxe inégalé dans la Suite Royale Al-Andalus. Cette vaste suite offre des vues imprenables sur le patio, un lit king-size somptueux drapé de linge fin, et une salle de bain attenante parée de tadelakt traditionnel et de zelliges. Détendez-vous dans votre salon privé ou profitez de votre terrasse exclusive.",
+      "ar": "عش تجربة فخامة لا تُضاهى في الجناح الملكي الأندلس. يوفر هذا الجناح الفسيح إطلالات خلابة على الفناء الداخلي، وسريراً ملكياً كبيراً مزيناً بأرقى البياضات، وحماماً داخلياً مزدان بالتدلاكت والزليج التقليدي. استرخِ في منطقة الجلوس الخاصة بك أو استمتع بشرفتك الخاصة."
+    },
     "amenities": ["King Bed", "Private Terrace", "Plunge Pool", "Fireplace", "Air Conditioning"],
     "images": ["/placeholder.jpg"],
     "featured": true
   },
   {
     "id": "2",
-    "name": "Jasmine Courtyard Room",
+    "name": {
+      "en": "Jasmine Courtyard Room",
+      "fr": "Chambre Patio Jasmin",
+      "ar": "غرفة فناء الياسمين"
+    },
     "slug": "jasmine-courtyard-room",
     "category": "riad-rooms",
     "price": 220,
     "currency": "MAD",
     "rating": 4.8,
     "guestCount": 2,
-    "shortDescription": "An elegant room opening directly onto our tranquil central courtyard, scented with jasmine.",
-    "longDescription": "The Jasmine Courtyard Room is a serene retreat on the ground floor. Wake up to the gentle sounds of the central fountain and the scent of jasmine. It features authentic Moroccan furnishings, hand-carved cedar wood details, and a luxurious tadelakt bathroom.",
+    "shortDescription": {
+      "en": "An elegant room opening directly onto our tranquil central courtyard, scented with jasmine.",
+      "fr": "Une chambre élégante s'ouvrant directement sur notre paisible patio central, baigné des senteurs de jasmin.",
+      "ar": "غرفة أنيقة تفتح مباشرة على فنائنا المركزي الهادئ، وتعبق برائحة الياسمين."
+    },
+    "longDescription": {
+      "en": "The Jasmine Courtyard Room is a serene retreat on the ground floor. Wake up to the gentle sounds of the central fountain and the scent of jasmine. It features authentic Moroccan furnishings, hand-carved cedar wood details, and a luxurious tadelakt bathroom.",
+      "fr": "La Chambre Patio Jasmin est un refuge serein situé au rez-de-chaussée. Réveillez-vous au doux murmure de la fontaine centrale et au parfum envoûtant du jasmin. Elle présente un mobilier marocain authentique, des boiseries en cèdre sculptées à la main et une luxueuse salle de bain en tadelakt.",
+      "ar": "غرفة فناء الياسمين هي ملاذ هادئ يقع في الطابق الأرضي. استيقظ على الأصوات الرقيقة للنافورة المركزية ورائحة الياسمين العطرة. تتميز الغرفة بمفروشات مغربية أصيلة، وتفاصيل من خشب الأرز المنحوت يدوياً، وحمام فاخر مكسو بالتدلاكت."
+    },
     "amenities": ["Queen Bed", "Courtyard Access", "Rain Shower", "Air Conditioning"],
     "images": ["/placeholder.jpg"],
     "featured": true
   },
   {
     "id": "3",
-    "name": "Oasis Garden Suite",
+    "name": {
+      "en": "Oasis Garden Suite",
+      "fr": "Suite Jardin Oasis",
+      "ar": "جناح حديقة الواحة"
+    },
     "slug": "oasis-garden-suite",
     "category": "garden-pool-view",
     "price": 380,
     "currency": "MAD",
     "rating": 4.9,
     "guestCount": 3,
-    "shortDescription": "A spacious suite overlooking the lush gardens and main swimming pool.",
-    "longDescription": "Immerse yourself in nature in the Oasis Garden Suite. With large windows offering sweeping views of the riad's botanical gardens and pool, this suite is flooded with natural light. It includes a king bed, a comfortable sitting area with a sofa bed, and a private balcony.",
+    "shortDescription": {
+      "en": "A spacious suite overlooking the lush gardens and main swimming pool.",
+      "fr": "Une suite spacieuse offrant une vue sur les jardins luxuriants et la piscine principale.",
+      "ar": "جناح فسيح يطل على الحدائق الغناء والمسبح الرئيسي."
+    },
+    "longDescription": {
+      "en": "Immerse yourself in nature in the Oasis Garden Suite. With large windows offering sweeping views of the riad's botanical gardens and pool, this suite is flooded with natural light. It includes a king bed, a comfortable sitting area with a sofa bed, and a private balcony.",
+      "fr": "Immergez-vous dans la nature au sein de la Suite Jardin Oasis. Grâce à ses grandes fenêtres offrant une vue imprenable sur les jardins botaniques du riad et la piscine, cette suite est inondée de lumière naturelle. Elle comprend un lit king-size, un coin salon confortable avec canapé-lit et un balcon privé.",
+      "ar": "انغمس في أحضان الطبيعة في جناح حديقة الواحة. بفضل نوافذه الكبيرة التي توفر إطلالات بانورامية على حدائق الرياض النباتية ومسبحه، يغمر هذا الجناح ضوء طبيعي ساحر. يحتوي على سرير ملكي، ومنطقة جلوس مريحة مع أريكة تتحول إلى سرير، وشرفة خاصة."
+    },
     "amenities": ["King Bed", "Sofa Bed", "Garden View", "Balcony", "Air Conditioning"],
     "images": ["/placeholder.jpg"],
     "featured": true
   },
   {
     "id": "4",
-    "name": "Medina View Penthouse",
+    "name": {
+      "en": "Medina View Penthouse",
+      "fr": "Penthouse Vue Médina",
+      "ar": "بنتهاوس إطلالة المدينة"
+    },
     "slug": "medina-view-penthouse",
     "category": "suites",
     "price": 520,
     "currency": "MAD",
     "rating": 5.0,
     "guestCount": 4,
-    "shortDescription": "Our most exclusive offering with panoramic rooftop views of the ancient Medina.",
-    "longDescription": "The Medina View Penthouse is the crown jewel of Dar Safaa. Situated on the top floor, it features a private rooftop terrace providing unobstructed views of the city skyline and Atlas Mountains. It includes two bedrooms, a spacious living room, and dedicated butler service.",
+    "shortDescription": {
+      "en": "Our most exclusive offering with panoramic rooftop views of the ancient Medina.",
+      "fr": "Notre offre la plus exclusive avec des vues panoramiques depuis le toit sur l'ancienne Médina.",
+      "ar": "عرضنا الأكثر حصرية مع إطلالات بانورامية من السطح على المدينة العتيقة."
+    },
+    "longDescription": {
+      "en": "The Medina View Penthouse is the crown jewel of Dar Safaa. Situated on the top floor, it features a private rooftop terrace providing unobstructed views of the city skyline and Atlas Mountains. It includes two bedrooms, a spacious living room, and dedicated butler service.",
+      "fr": "Le Penthouse Vue Médina est le joyau de la couronne de Dar Safaa. Situé au dernier étage, il dispose d'une terrasse privée sur le toit offrant une vue imprenable sur les toits de la ville et les montagnes de l'Atlas. Il comprend deux chambres, un salon spacieux et un service de majordome dédié.",
+      "ar": "بنتهاوس إطلالة المدينة هو جوهرة تاج دار صفاء. يقع في الطابق العلوي، ويضم شرفة خاصة على السطح توفر إطلالات غير محجوبة على أفق المدينة وجبال الأطلس. يشتمل على غرفتي نوم، وغرفة معيشة فسيحة، وخدمة كبير خدم مخصصة."
+    },
     "amenities": ["Two King Beds", "Private Rooftop", "Panoramic Views", "Butler Service", "Fireplace"],
     "images": ["/placeholder.jpg"],
     "featured": false
   },
   {
     "id": "5",
-    "name": "Saffron Deluxe Room",
+    "name": {
+      "en": "Saffron Deluxe Room",
+      "fr": "Chambre Deluxe Safran",
+      "ar": "غرفة الزعفران الديلوكس"
+    },
     "slug": "saffron-deluxe-room",
     "category": "riad-rooms",
     "price": 250,
     "currency": "MAD",
     "rating": 4.7,
     "guestCount": 2,
-    "shortDescription": "Decorated in warm saffron tones, offering a cozy and authentic atmosphere.",
-    "longDescription": "The Saffron Deluxe Room offers a warm, inviting ambiance with its rich color palette and intricate brass lanterns. Located on the first floor, it provides a quiet sanctuary with a plush queen-size bed and a beautifully detailed en-suite bathroom.",
+    "shortDescription": {
+      "en": "Decorated in warm saffron tones, offering a cozy and authentic atmosphere.",
+      "fr": "Décorée dans des tons chauds de safran, offrant une atmosphère chaleureuse et authentique.",
+      "ar": "مزينة بدرجات ألوان الزعفران الدافئة، مما يوفر أجواء دافئة وأصيلة."
+    },
+    "longDescription": {
+      "en": "The Saffron Deluxe Room offers a warm, inviting ambiance with its rich color palette and intricate brass lanterns. Located on the first floor, it provides a quiet sanctuary with a plush queen-size bed and a beautifully detailed en-suite bathroom.",
+      "fr": "La Chambre Deluxe Safran offre une ambiance chaleureuse et accueillante avec sa palette de couleurs riches et ses lanternes en laiton ciselé. Située au premier étage, elle constitue un sanctuaire paisible doté d'un lit queen-size douillet et d'une salle de bain attenante aux finitions soignées.",
+      "ar": "توفر غرفة الزعفران الديلوكس أجواء دافئة وجذابة بفضل لوحة ألوانها الغنية والفوانيس النحاسية المعقدة. تقع في الطابق الأول، وتوفر ملاذاً هادئاً يضم سريراً مزدوجاً ووثيراً وحماماً داخلياً بتفاصيل بديعة."
+    },
     "amenities": ["Queen Bed", "Medina View", "Rain Shower", "Air Conditioning"],
     "images": ["/placeholder.jpg"],
     "featured": false
   },
   {
     "id": "6",
-    "name": "Palm Poolside Room",
+    "name": {
+      "en": "Palm Poolside Room",
+      "fr": "Chambre Palmiers Côté Piscine",
+      "ar": "غرفة النخيل بجانب المسبح"
+    },
     "slug": "palm-poolside-room",
     "category": "garden-pool-view",
     "price": 290,
     "currency": "MAD",
     "rating": 4.8,
     "guestCount": 2,
-    "shortDescription": "Step directly from your room to our stunning azure pool.",
-    "longDescription": "Perfect for sun lovers, the Palm Poolside Room offers direct access to the riad's main swimming pool. The room features cool tadelakt walls, a comfortable king-size bed, and a private shaded patio area.",
+    "shortDescription": {
+      "en": "Step directly from your room to our stunning azure pool.",
+      "fr": "Passez directement de votre chambre à notre superbe piscine azur.",
+      "ar": "اخطُ مباشرة من غرفتك إلى مسبحنا اللازوردي المذهل."
+    },
+    "longDescription": {
+      "en": "Perfect for sun lovers, the Palm Poolside Room offers direct access to the riad's main swimming pool. The room features cool tadelakt walls, a comfortable king-size bed, and a private shaded patio area.",
+      "fr": "Idéale pour les amateurs de soleil, la Chambre Palmiers Côté Piscine offre un accès direct à la piscine principale du riad. La chambre est dotée de murs en tadelakt rafraîchissants, d'un lit king-size confortable et d'un patio privé ombragé.",
+      "ar": "تُعد غرفة النخيل بجانب المسبح مثالية لعشاق الشمس، حيث توفر وصولاً مباشراً إلى المسبح الرئيسي للرياض. تتميز الغرفة بجدران التدلاكت المنعشة، وسرير ملكي مريح، وفناء خاص مظلل."
+    },
     "amenities": ["King Bed", "Direct Pool Access", "Private Patio", "Air Conditioning"],
     "images": ["/placeholder.jpg"],
     "featured": false
   },
   {
     "id": "7",
-    "name": "Atlas Family Suite",
+    "name": {
+      "en": "Atlas Family Suite",
+      "fr": "Suite Familiale de l'Atlas",
+      "ar": "جناح أطلس العائلي"
+    },
     "slug": "atlas-family-suite",
     "category": "suites",
     "price": 410,
     "currency": "MAD",
     "rating": 4.9,
     "guestCount": 5,
-    "shortDescription": "A generous, interconnected suite perfect for families or groups.",
-    "longDescription": "Designed with families in mind, the Atlas Family Suite consists of two interconnected rooms and a shared central living area. It offers ample space, luxurious amenities, and views over both the courtyard and the surrounding medina.",
+    "shortDescription": {
+      "en": "A generous, interconnected suite perfect for families or groups.",
+      "fr": "Une suite généreuse et communicante, parfaite pour les familles ou les groupes.",
+      "ar": "جناح رحب ومتصل، مثالي للعائلات أو المجموعات."
+    },
+    "longDescription": {
+      "en": "Designed with families in mind, the Atlas Family Suite consists of two interconnected rooms and a shared central living area. It offers ample space, luxurious amenities, and views over both the courtyard and the surrounding medina.",
+      "fr": "Conçue pour les familles, la Suite Familiale de l'Atlas se compose de deux chambres communicantes et d'un espace de vie central partagé. Elle offre un espace généreux, des équipements de luxe et des vues imprenables sur le patio et la médina environnante.",
+      "ar": "صُمم جناح أطلس العائلي خصيصاً للعائلات، ويتكون من غرفتين متصلتين ومنطقة معيشة مركزية مشتركة. يوفر مساحة واسعة، ووسائل راحة فاخرة، وإطلالات على كل من الفناء الداخلي والمدينة العتيقة المحيطة به."
+    },
     "amenities": ["1 King Bed", "2 Twin Beds", "Sofa Bed", "Two Bathrooms", "Living Area"],
     "images": ["/placeholder.jpg"],
     "featured": false
   },
   {
     "id": "8",
-    "name": "Citrus Grove Room",
+    "name": {
+      "en": "Citrus Grove Room",
+      "fr": "Chambre de la Palmeraie aux Agrumes",
+      "ar": "غرفة بستان الحمضيات"
+    },
     "slug": "citrus-grove-room",
     "category": "garden-pool-view",
     "price": 270,
     "currency": "MAD",
     "rating": 4.6,
     "guestCount": 2,
-    "shortDescription": "Tucked away in a quiet corner of our gardens, surrounded by orange and lemon trees.",
-    "longDescription": "The Citrus Grove Room is a secluded haven situated amongst our fragrant orange and lemon trees. It offers exceptional privacy, a comfortable queen bed, and a charming rustic design that reflects the agricultural heritage of the region.",
+    "shortDescription": {
+      "en": "Tucked away in a quiet corner of our gardens, surrounded by orange and lemon trees.",
+      "fr": "Nichée dans un coin tranquille de nos jardins, entourée d'orangers et de citronniers.",
+      "ar": "مخبأة في زاوية هادئة من حدائقنا، محاطة بأشجار البرتقال والليمون."
+    },
+    "longDescription": {
+      "en": "The Citrus Grove Room is a secluded haven situated amongst our fragrant orange and lemon trees. It offers exceptional privacy, a comfortable queen bed, and a charming rustic design that reflects the agricultural heritage of the region.",
+      "fr": "La Chambre de la Palmeraie aux Agrumes est un havre isolé situé parmi nos orangers et citronniers parfumés. Elle offre une intimité exceptionnelle, un lit queen confortable et un design rustique charmant qui reflète l'héritage agricole de la région.",
+      "ar": "غرفة بستان الحمضيات هي ملاذ منعزل يقع وسط أشجار البرتقال والليمون العطرة. توفر الغرفة خصوصية استثنائية، وسريراً مزدوجاً مريحاً، وتصميماً ريفياً ساحراً يعكس التراث الزراعي للمنطقة."
+    },
     "amenities": ["Queen Bed", "Garden View", "Rain Shower", "Air Conditioning"],
     "images": ["/placeholder.jpg"],
     "featured": false

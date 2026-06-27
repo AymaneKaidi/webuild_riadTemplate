@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { X, Trash2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useWishlist } from '../../context/WishlistContext';
+import { useTranslation } from 'react-i18next';
 import roomsData from '../../data/rooms.json';
 
 interface WishlistDrawerProps {
@@ -10,11 +11,11 @@ interface WishlistDrawerProps {
 }
 
 export default function WishlistDrawer({ isOpen, onClose }: WishlistDrawerProps) {
-  const { state, removeFromWishlist } = useWishlist();
+  const { state, toggleWishlist } = useWishlist();
+  const { t, i18n } = useTranslation();
+  const currentLang = (i18n.language || 'en') as 'en' | 'fr' | 'ar';
 
-  const savedRooms = state.wishlistIds
-    .map(id => roomsData.find(r => r.id === id))
-    .filter((room): room is NonNullable<typeof room> => room !== undefined);
+  const savedRooms = roomsData.filter(room => state.wishlistIds.includes(room.id));
 
   return (
     <AnimatePresence>
@@ -35,10 +36,10 @@ export default function WishlistDrawer({ isOpen, onClose }: WishlistDrawerProps)
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: 'spring', bounce: 0, duration: 0.4 }}
-            className="fixed top-0 right-0 w-full max-w-md h-full bg-sand shadow-2xl z-50 flex flex-col overflow-hidden"
+            className="fixed top-0 bottom-0 end-0 w-full max-w-md h-full bg-sand shadow-2xl z-50 flex flex-col overflow-hidden"
           >
             <div className="flex items-center justify-between p-6 border-b border-charcoal/10">
-              <h2 className="font-heading text-2xl text-teal">Your Wishlist</h2>
+              <h2 className="font-heading text-2xl text-teal">{t('wishlist.title')}</h2>
               <button
                 onClick={onClose}
                 className="p-2 hover:bg-charcoal/5 rounded-full transition-colors text-charcoal/70"
@@ -51,19 +52,21 @@ export default function WishlistDrawer({ isOpen, onClose }: WishlistDrawerProps)
               {savedRooms.length === 0 ? (
                 <div className="flex flex-col items-center justify-center h-full text-charcoal/50 font-body space-y-4">
                   <HeartIconEmpty />
-                  <p>Your wishlist is empty.</p>
+                  <p>{t('wishlist.empty')}</p>
                   <button
                     onClick={onClose}
                     className="text-terracotta underline hover:text-terracotta-dark"
                   >
-                    Explore our rooms
+                    {t('wishlist.explore')}
                   </button>
                 </div>
               ) : (
-                savedRooms.map(room => (
-                  <div key={room.id} className="flex bg-white rounded shadow-sm overflow-hidden group">
-                    <div className="w-24 bg-charcoal/5 flex-shrink-0 flex items-center justify-center text-charcoal/20 text-[10px] uppercase font-body">
-                      Image
+                savedRooms.map(room => {
+                  const roomName = (room.name as unknown as Record<string, string>)[currentLang] || (room.name as unknown as Record<string, string>).en;
+                  return (
+                  <div key={room.id} className="flex bg-white rounded shadow-sm overflow-hidden group p-2">
+                    <div className="w-24 bg-charcoal/5 flex-shrink-0 flex items-center justify-center text-charcoal/20 text-[10px] uppercase font-body rounded">
+                      {t('common.image')}
                     </div>
                     <div className="p-4 flex-grow flex flex-col">
                       <div className="flex justify-between items-start">
@@ -72,12 +75,12 @@ export default function WishlistDrawer({ isOpen, onClose }: WishlistDrawerProps)
                           onClick={onClose}
                           className="font-heading text-lg text-teal hover:text-terracotta transition-colors line-clamp-1 mr-2"
                         >
-                          {room.name}
+                          {roomName}
                         </Link>
                         <button
-                          onClick={() => removeFromWishlist(room.id)}
+                          onClick={() => toggleWishlist(room.id)}
                           className="text-charcoal/40 hover:text-terracotta transition-colors shrink-0"
-                          title="Remove"
+                          title={t('wishlist.remove')}
                         >
                           <Trash2 className="w-4 h-4" />
                         </button>
@@ -92,12 +95,12 @@ export default function WishlistDrawer({ isOpen, onClose }: WishlistDrawerProps)
                           onClick={onClose}
                           className="text-xs uppercase tracking-widest text-terracotta hover:text-terracotta-dark font-semibold"
                         >
-                          View
+                          {t('wishlist.view')} →
                         </Link>
                       </div>
                     </div>
                   </div>
-                ))
+                )})
               )}
             </div>
           </motion.div>

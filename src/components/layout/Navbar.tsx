@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Heart, Globe, Menu } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { useWishlist } from '../../context/WishlistContext';
 import WishlistDrawer from './WishlistDrawer';
 import MobileMenu from './MobileMenu';
@@ -12,6 +13,13 @@ export default function Navbar() {
   const location = useLocation();
   const isHome = location.pathname === '/';
   const { state } = useWishlist();
+  const { t, i18n } = useTranslation();
+
+  const cycleLanguage = () => {
+    const langs = ['en', 'fr', 'ar'];
+    const next = langs[(langs.indexOf(i18n.language) + 1) % langs.length];
+    i18n.changeLanguage(next);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,18 +39,21 @@ export default function Navbar() {
           Dar Safaa
         </Link>
 
-        <div className="hidden md:flex items-center space-x-8 font-body text-sm uppercase tracking-widest">
-          <Link to="/" className="hover:text-terracotta transition-colors">Home</Link>
-          <Link to="/rooms" className="hover:text-terracotta transition-colors">Rooms</Link>
-          <a href="#" className="hover:text-terracotta transition-colors">Amenities</a>
-          <a href="#" className="hover:text-terracotta transition-colors">About</a>
-          <a href="#" className="hover:text-terracotta transition-colors">Contact</a>
+        <div className="hidden md:flex items-center gap-x-8 font-body text-sm uppercase tracking-widest">
+          <Link to="/" className="hover:text-terracotta transition-colors">{t('nav.home')}</Link>
+          <Link to="/rooms" className="hover:text-terracotta transition-colors">{t('nav.rooms')}</Link>
+          <a href="#" className="hover:text-terracotta transition-colors">{t('nav.amenities')}</a>
+          <a href="#" className="hover:text-terracotta transition-colors">{t('nav.about')}</a>
+          <a href="#" className="hover:text-terracotta transition-colors">{t('nav.contact')}</a>
         </div>
 
-        <div className="flex items-center space-x-4">
-          <div className="hidden md:flex items-center space-x-1 cursor-pointer hover:text-terracotta transition-colors">
+        <div className="flex items-center gap-x-4">
+          <div 
+            onClick={cycleLanguage}
+            className="hidden md:flex items-center gap-x-1 cursor-pointer hover:text-terracotta transition-colors"
+          >
             <Globe className="w-5 h-5" />
-            <span className="text-xs font-medium uppercase">EN</span>
+            <span className="text-xs font-medium uppercase">{i18n.language}</span>
           </div>
           <button
             onClick={() => setIsDrawerOpen(true)}
@@ -50,7 +61,7 @@ export default function Navbar() {
           >
             <Heart className="w-6 h-6" />
             {state.wishlistIds.length > 0 && (
-              <span className="absolute -top-1 -right-1 bg-terracotta text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">
+              <span className="absolute -top-1 -end-1 bg-terracotta text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">
                 {state.wishlistIds.length}
               </span>
             )}
@@ -58,7 +69,7 @@ export default function Navbar() {
 
           <button 
             onClick={() => setIsMobileMenuOpen(true)}
-            className="md:hidden ml-4 p-1 hover:text-terracotta transition-colors"
+            className="md:hidden ms-4 p-1 hover:text-terracotta transition-colors"
           >
             <Menu className="w-6 h-6" />
           </button>

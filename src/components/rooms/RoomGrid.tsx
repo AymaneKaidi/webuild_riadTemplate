@@ -1,21 +1,29 @@
 import { useRef, useEffect } from 'react';
 import RoomCard from './RoomCard';
 import gsap from 'gsap';
+import { useTranslation } from 'react-i18next';
+
+interface LocalizedString {
+  en: string;
+  fr: string;
+  ar: string;
+}
 
 interface Room {
   id: string;
-  name: string;
+  name: LocalizedString;
   slug: string;
   category: string;
   price: number;
   currency: string;
   rating: number;
   guestCount: number;
-  shortDescription: string;
+  shortDescription: LocalizedString;
 }
 
 export default function RoomGrid({ rooms }: { rooms: Room[] }) {
   const gridRef = useRef<HTMLDivElement>(null);
+  const { t } = useTranslation();
 
   useEffect(() => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
@@ -44,7 +52,7 @@ export default function RoomGrid({ rooms }: { rooms: Room[] }) {
   if (rooms.length === 0) {
     return (
       <div className="py-20 text-center font-body text-charcoal/60">
-        No rooms found in this category.
+        {t('rooms.empty')}
       </div>
     );
   }
@@ -52,7 +60,7 @@ export default function RoomGrid({ rooms }: { rooms: Room[] }) {
   return (
     <div ref={gridRef} className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
       {rooms.map((room) => (
-        <RoomCard key={room.id} room={room} />
+        <RoomCard key={room.id} room={room as any} />
       ))}
     </div>
   );

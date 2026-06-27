@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
+import ScrollToTop from './components/layout/ScrollToTop';
 import Home from './pages/Home';
 import Rooms from './pages/Rooms';
 import RoomDetailPage from './pages/RoomDetailPage';
@@ -30,6 +31,8 @@ function App() {
       touchMultiplier: 2,
     });
 
+    (window as any).lenis = lenis;
+
     lenis.on('scroll', ScrollTrigger.update);
 
     gsap.ticker.add((time: number) => {
@@ -41,12 +44,14 @@ function App() {
     return () => {
       lenis.destroy();
       gsap.ticker.remove(lenis.raf);
+      delete (window as any).lenis;
     };
   }, []);
 
   return (
     <WishlistProvider>
       <Router>
+        <ScrollToTop />
         <div className="flex flex-col min-h-screen font-body antialiased bg-sand text-charcoal">
           <Navbar />
           <main className="flex-grow">

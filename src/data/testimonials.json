@@ -1,27 +1,47 @@
 [
   {
     "name": "Eleanor Fontaine",
-    "quote": "Dar Safaa is an absolute dream. From the moment we walked through the ancient doors, we were transported to a world of calm and exceptional beauty. The Suite Royale was magnificent.",
+    "quote": {
+      "en": "Dar Safaa is an absolute dream. From the moment we walked through the ancient doors, we were transported to a world of calm and exceptional beauty. The Suite Royale was magnificent.",
+      "fr": "Dar Safaa est un rêve absolu. Dès l'instant où nous avons franchi ses portes anciennes, nous avons été transportés dans un univers de calme et d'une beauté exceptionnelle. La Suite Royale était tout simplement magnifique.",
+      "ar": "دار صفاء هي حلم يتحقق. منذ اللحظة التي عبرنا فيها الأبواب العتيقة، نُقلنا إلى عالم من الهدوء والجمال الاستثنائي. الجناح الملكي كان مبهراً."
+    },
     "rating": 5
   },
   {
     "name": "James & Sarah Collins",
-    "quote": "The hospitality here is unmatched. The staff anticipated every need, and the breakfasts on the rooftop terrace were the highlight of our trip to Morocco. Truly a five-star experience.",
+    "quote": {
+      "en": "The hospitality here is unmatched. The staff anticipated every need, and the breakfasts on the rooftop terrace were the highlight of our trip to Morocco. Truly a five-star experience.",
+      "fr": "L'hospitalité ici est incomparable. Le personnel anticipait nos moindres désirs, et les petits-déjeuners sur le toit-terrasse ont été le point d'orgue de notre voyage au Maroc. Une véritable expérience cinq étoiles.",
+      "ar": "الضيافة هنا لا يُعلى عليها. كان طاقم العمل يتوقع كل احتياجاتنا، وكانت وجبات الإفطار على شرفة السطح هي أبرز ما في رحلتنا إلى المغرب. حقاً، إنها تجربة من فئة الخمس نجوم."
+    },
     "rating": 5
   },
   {
     "name": "Amina Berrada",
-    "quote": "A perfect blend of traditional Moroccan architecture and modern luxury. The attention to detail in the zellige and carved woodwork is breathtaking. I will definitely be returning.",
+    "quote": {
+      "en": "A perfect blend of traditional Moroccan architecture and modern luxury. The attention to detail in the zellige and carved woodwork is breathtaking. I will definitely be returning.",
+      "fr": "Un mariage parfait entre l'architecture marocaine traditionnelle et le luxe moderne. L'attention portée aux détails du zellige et des boiseries sculptées est époustouflante. Je reviendrai sans aucun doute.",
+      "ar": "مزيج مثالي بين المعمار المغربي التقليدي والفخامة العصرية. الاهتمام بالتفاصيل في الزليج والأعمال الخشبية المنحوتة يأسر الأنفاس. سأعود بالتأكيد."
+    },
     "rating": 5
   },
   {
     "name": "Marcus Thorne",
-    "quote": "An oasis of tranquility in the heart of the bustling medina. Returning to the serene courtyard pool after a day of exploring felt like a true escape.",
+    "quote": {
+      "en": "An oasis of tranquility in the heart of the bustling medina. Returning to the serene courtyard pool after a day of exploring felt like a true escape.",
+      "fr": "Une oasis de tranquillité au cœur de l'effervescence de la médina. Revenir à la sérénité de la piscine du patio après une journée d'exploration fut une véritable évasion.",
+      "ar": "واحة من السكينة في قلب المدينة العتيقة النابضة بالحياة. كانت العودة إلى مسبح الفناء الهادئ بعد يوم من الاستكشاف تبدو وكأنها ملاذ حقيقي."
+    },
     "rating": 5
   },
   {
     "name": "Juliette Dubois",
-    "quote": "Every corner of Dar Safaa is a work of art. The Jasmine Courtyard Room was pristine, comfortable, and beautifully fragrant. Highly recommended for couples seeking romance.",
+    "quote": {
+      "en": "Every corner of Dar Safaa is a work of art. The Jasmine Courtyard Room was pristine, comfortable, and beautifully fragrant. Highly recommended for couples seeking romance.",
+      "fr": "Chaque recoin de Dar Safaa est une œuvre d'art. La Chambre Patio Jasmin était immaculée, confortable et délicieusement parfumée. Fortement recommandée pour les couples en quête de romantisme.",
+      "ar": "كل زاوية في دار صفاء هي تحفة فنية. كانت غرفة فناء الياسمين نقية ومريحة وتفوح منها روائح زكية. أوصي بها بشدة للأزواج الباحثين عن أجواء رومانسية."
+    },
     "rating": 5
   }
 ]

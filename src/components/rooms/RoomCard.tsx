@@ -2,22 +2,33 @@ import { Heart, Star, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { useWishlist } from '../../context/WishlistContext';
+import { useTranslation } from 'react-i18next';
+
+interface LocalizedString {
+  en: string;
+  fr: string;
+  ar: string;
+}
 
 interface Room {
   id: string;
-  name: string;
+  name: LocalizedString;
   slug: string;
   category: string;
   price: number;
   currency: string;
   rating: number;
   guestCount: number;
-  shortDescription: string;
+  shortDescription: LocalizedString;
 }
 
 export default function RoomCard({ room }: { room: Room }) {
   const { state, toggleWishlist } = useWishlist();
+  const { t, i18n } = useTranslation();
   const isWishlisted = state.wishlistIds.includes(room.id);
+  const currentLang = (i18n.language || 'en') as keyof LocalizedString;
+  const shortDesc = room.shortDescription[currentLang] || room.shortDescription.en;
+  const roomName = room.name[currentLang] || room.name.en;
 
   const handleToggle = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -34,11 +45,11 @@ export default function RoomCard({ room }: { room: Room }) {
         {/* Image Placeholder */}
         <div className="relative aspect-[4/3] bg-charcoal/5 overflow-hidden">
           <div className="absolute inset-0 flex items-center justify-center text-charcoal/20 font-body text-sm tracking-widest uppercase">
-            Image Preview
+            {t('common.image_preview')}
           </div>
           <button
             onClick={handleToggle}
-            className="absolute top-4 right-4 z-10 p-2 bg-white/80 backdrop-blur-sm rounded-full hover:bg-white transition-colors"
+            className="absolute top-4 end-4 z-10 p-2 bg-white/80 backdrop-blur-sm rounded-full hover:bg-white transition-colors"
           >
             <Heart className={`w-5 h-5 transition-colors ${isWishlisted ? 'fill-terracotta text-terracotta' : 'text-charcoal'}`} />
           </button>
@@ -47,13 +58,13 @@ export default function RoomCard({ room }: { room: Room }) {
         {/* Content */}
         <div className="p-4 md:p-6 flex flex-col flex-grow">
           <div className="flex justify-between items-start mb-2">
-            <h3 className="font-heading text-xl md:text-2xl text-teal">{room.name}</h3>
+            <h3 className="font-heading text-xl md:text-2xl text-teal">{roomName}</h3>
           </div>
 
-          <div className="flex items-center space-x-4 text-xs md:text-sm font-body text-charcoal/70 mb-4">
-            <div className="flex items-center space-x-1">
-              <Users className="w-4 h-4" />
-              <span>{room.guestCount} Guests</span>
+          <div className="flex items-center gap-x-4 text-xs md:text-sm font-body text-charcoal/70 mb-4">
+            <div className="flex items-center gap-x-1">
+              <Users className="w-4 h-4 text-terracotta" />
+              <span className="text-xs uppercase tracking-widest">{t('rooms.guests', { count: room.guestCount })}</span>
             </div>
             <div className="flex items-center space-x-1">
               <Star className="w-4 h-4 text-terracotta fill-terracotta" />
@@ -62,17 +73,17 @@ export default function RoomCard({ room }: { room: Room }) {
           </div>
 
           <p className="font-body text-sm text-charcoal/80 mb-6 flex-grow line-clamp-2">
-            {room.shortDescription}
+            {shortDesc}
           </p>
 
-          <div className="flex items-center justify-between mt-auto pt-4 border-t border-sand">
-            <div className="font-body">
-              <span className="text-lg font-medium text-charcoal">{room.price} {room.currency}</span>
-              <span className="text-xs text-charcoal/60 ml-1">/ night</span>
+          <div className="mt-4 flex items-center justify-between">
+            <div>
+              <span className="font-heading text-xl">{room.price} {room.currency}</span>
+              <span className="text-xs uppercase tracking-widest text-charcoal/60 ms-1">{t('rooms.per_night')}</span>
             </div>
-            <div className="px-4 py-2 bg-terracotta text-white font-body text-xs uppercase tracking-widest hover:bg-terracotta-dark transition-colors">
-              View Room
-            </div>
+            <span className="text-xs uppercase tracking-widest text-terracotta group-hover:text-terracotta-dark font-semibold transition-colors">
+              {t('rooms.view_room')} →
+            </span>
           </div>
         </div>
       </Link>

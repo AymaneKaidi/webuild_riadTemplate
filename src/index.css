@@ -9,3 +9,12 @@
     @apply bg-sand text-charcoal font-body antialiased;
   }
 }
+
+@layer utilities {
+  html[lang="ar"] .font-heading {
+    font-family: 'Markazi Text', serif;
+  }
+  html[lang="ar"] .font-body {
+    font-family: 'Tajawal', sans-serif;
+  }
+}

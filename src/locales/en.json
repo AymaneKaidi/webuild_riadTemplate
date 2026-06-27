@@ -1,0 +1,108 @@
+{
+  "common": {
+    "image": "Image",
+    "image_preview": "Image Preview",
+    "main_image_preview": "Main Image Preview",
+    "gallery_image": "Gallery Image"
+  },
+  "nav": {
+    "home": "Home",
+    "rooms": "Rooms",
+    "amenities": "Amenities",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "A Sanctuary of Serenity",
+    "subtitle": "Experience the timeless elegance of Moroccan hospitality in the heart of the medina.",
+    "explore": "Explore Rooms",
+    "book": "Book Your Stay"
+  },
+  "rooms": {
+    "title": "Our Rooms",
+    "page_title": "Our Accommodations",
+    "page_subtitle": "Discover your perfect sanctuary. Each room is uniquely designed with authentic Moroccan craftsmanship and modern comforts.",
+    "back": "Back to Rooms",
+    "guests": "Up to {{count}} guests",
+    "per_night": "/ night",
+    "view_room": "View Room",
+    "book_now": "Book Now",
+    "similar": "You Might Also Like",
+    "categories": {
+      "all": "All Accommodations",
+      "suites": "Luxury Suites",
+      "riad_rooms": "Riad Rooms",
+      "garden_pool_view": "Garden & Pool View"
+    },
+    "empty": "No rooms found for this category.",
+    "rating": "Rating",
+    "amenities": "Room Amenities",
+    "amenities_list": {
+      "king_bed": "King Bed",
+      "queen_bed": "Queen Bed",
+      "1_king_bed": "1 King Bed",
+      "2_twin_beds": "2 Twin Beds",
+      "two_king_beds": "Two King Beds",
+      "private_terrace": "Private Terrace",
+      "private_rooftop": "Private Rooftop",
+      "private_patio": "Private Patio",
+      "balcony": "Balcony",
+      "plunge_pool": "Plunge Pool",
+      "direct_pool_access": "Direct Pool Access",
+      "rain_shower": "Rain Shower",
+      "two_bathrooms": "Two Bathrooms",
+      "fireplace": "Fireplace",
+      "air_conditioning": "Air Conditioning",
+      "sofa_bed": "Sofa Bed",
+      "living_area": "Living Area",
+      "garden_view": "Garden View",
+      "courtyard_access": "Courtyard Access",
+      "medina_view": "Medina View",
+      "panoramic_views": "Panoramic Views",
+      "butler_service": "Butler Service"
+    }
+  },
+  "home": {
+    "featured_title": "Our Signature Rooms",
+    "featured_subtitle": "Experience authentic luxury in our carefully curated suites.",
+    "view_all": "View All Accommodations"
+  },
+  "wishlist": {
+    "title": "Your Wishlist",
+    "empty": "Your wishlist is empty",
+    "remove": "Remove",
+    "view": "View Room",
+    "explore": "Explore our rooms"
+  },
+  "booking": {
+    "title": "Reservation Requested",
+    "success": "Thank you, {{name}} — we'll confirm your stay for the {{room}} shortly.",
+    "close": "Close",
+    "submit": "Request Reservation",
+    "labels": {
+      "name": "Full Name *",
+      "email": "Email Address *",
+      "checkIn": "Check-in Date *",
+      "checkOut": "Check-out Date *",
+      "phone": "Phone (Optional)",
+      "guests": "Guests *",
+      "message": "Special Requests (Optional)"
+    },
+    "errors": {
+      "nameReq": "Name is required",
+      "emailReq": "Email is required",
+      "emailInvalid": "Invalid email format",
+      "checkInReq": "Check-in date is required",
+      "checkOutReq": "Check-out date is required",
+      "checkOutAfter": "Check-out must be after check-in"
+    }
+  },
+  "testimonials": {
+    "title": "Guest Experiences"
+  },
+  "footer": {
+    "description": "A sanctuary of purity and serenity in the heart of the Medina. Experience the authentic warmth of Moroccan hospitality.",
+    "contact": "Contact",
+    "rights": "© {{year}} Dar Safaa Riad. All rights reserved."
+  }
+}

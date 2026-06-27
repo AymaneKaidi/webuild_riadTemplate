@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import { X } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -9,6 +10,8 @@ interface MobileMenuProps {
 }
 
 export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
+  const { t, i18n } = useTranslation();
+
   // Lock body scroll when the menu is open to prevent Lenis/native scroll conflicts
   useEffect(() => {
     if (isOpen) {
@@ -22,11 +25,11 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   }, [isOpen]);
 
   const links = [
-    { name: 'Home', path: '/' },
-    { name: 'Rooms', path: '/rooms' },
-    { name: 'Amenities', path: '#' },
-    { name: 'About', path: '#' },
-    { name: 'Contact', path: '#' },
+    { name: t('nav.home'), path: '/' },
+    { name: t('nav.rooms'), path: '/rooms' },
+    { name: t('nav.amenities'), path: '#' },
+    { name: t('nav.about'), path: '#' },
+    { name: t('nav.contact'), path: '#' },
   ];
 
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -71,7 +74,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             </span>
             <button 
               onClick={onClose}
-              className="p-2 -mr-2 text-charcoal hover:text-terracotta transition-colors"
+              className="p-2 -me-2 text-charcoal hover:text-terracotta transition-colors"
             >
               <X className="w-8 h-8" />
             </button>
@@ -82,7 +85,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             variants={prefersReducedMotion ? undefined : staggerVariants}
             initial="hidden"
             animate="visible"
-            className="flex-grow flex flex-col justify-center items-center space-y-8 px-6"
+            className="flex-grow flex flex-col justify-center items-center gap-y-8 px-6"
           >
             {links.map((link) => (
               <motion.div key={link.name} variants={prefersReducedMotion ? undefined : itemVariants}>
@@ -97,10 +100,19 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             ))}
             
             {/* Language Switcher */}
-            <motion.div variants={prefersReducedMotion ? undefined : itemVariants} className="pt-8 mt-8 border-t border-charcoal/10 flex space-x-6 text-charcoal/60 font-body uppercase tracking-widest text-sm">
-              <span className="text-terracotta font-bold">EN</span>
-              <a href="#" className="hover:text-terracotta transition-colors">FR</a>
-              <a href="#" className="hover:text-terracotta transition-colors">AR</a>
+            <motion.div variants={prefersReducedMotion ? undefined : itemVariants} className="pt-8 mt-8 border-t border-charcoal/10 flex gap-x-6 text-charcoal/60 font-body uppercase tracking-widest text-sm">
+              <button 
+                onClick={() => i18n.changeLanguage('en')}
+                className={`${i18n.language === 'en' ? 'text-terracotta font-bold' : 'hover:text-terracotta transition-colors'}`}
+              >EN</button>
+              <button 
+                onClick={() => i18n.changeLanguage('fr')}
+                className={`${i18n.language === 'fr' ? 'text-terracotta font-bold' : 'hover:text-terracotta transition-colors'}`}
+              >FR</button>
+              <button 
+                onClick={() => i18n.changeLanguage('ar')}
+                className={`${i18n.language === 'ar' ? 'text-terracotta font-bold' : 'hover:text-terracotta transition-colors'}`}
+              >AR</button>
             </motion.div>
           </motion.div>
         </motion.div>

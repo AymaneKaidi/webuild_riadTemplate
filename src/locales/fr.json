@@ -1,0 +1,108 @@
+{
+  "common": {
+    "image": "Image",
+    "image_preview": "Aperçu de l'Image",
+    "main_image_preview": "Aperçu de l'Image Principale",
+    "gallery_image": "Image de la Galerie"
+  },
+  "nav": {
+    "home": "Accueil",
+    "rooms": "Chambres",
+    "amenities": "Commodités",
+    "about": "À Propos",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Un Sanctuaire de Sérénité",
+    "subtitle": "Découvrez l'élégance intemporelle de l'hospitalité marocaine au cœur de la médina.",
+    "explore": "Explorer les Chambres",
+    "book": "Réservez Votre Séjour"
+  },
+  "rooms": {
+    "title": "Nos Chambres",
+    "page_title": "Nos Hébergements",
+    "page_subtitle": "Découvrez votre sanctuaire parfait. Chaque chambre est conçue de manière unique avec un artisanat marocain authentique et un confort moderne.",
+    "back": "Retour aux Chambres",
+    "guests": "Jusqu'à {{count}} personnes",
+    "per_night": "/ nuit",
+    "view_room": "Voir la Chambre",
+    "book_now": "Réserver",
+    "similar": "Vous Pourriez Aussi Aimer",
+    "categories": {
+      "all": "Tous les Hébergements",
+      "suites": "Suites de Luxe",
+      "riad_rooms": "Chambres du Riad",
+      "garden_pool_view": "Vue sur Jardin & Piscine"
+    },
+    "empty": "Aucune chambre trouvée pour cette catégorie.",
+    "rating": "Note",
+    "amenities": "Équipements de la Chambre",
+    "amenities_list": {
+      "king_bed": "Lit King-Size",
+      "queen_bed": "Lit Queen-Size",
+      "1_king_bed": "1 Lit King-Size",
+      "2_twin_beds": "2 Lits Simples",
+      "two_king_beds": "Deux Lits King-Size",
+      "private_terrace": "Terrasse Privée",
+      "private_rooftop": "Toit-Terrasse Privé",
+      "private_patio": "Patio Privé",
+      "balcony": "Balcon",
+      "plunge_pool": "Bassin Privé",
+      "direct_pool_access": "Accès Direct à la Piscine",
+      "rain_shower": "Douche à l'Italienne",
+      "two_bathrooms": "Deux Salles de Bain",
+      "fireplace": "Cheminée",
+      "air_conditioning": "Climatisation",
+      "sofa_bed": "Canapé-Lit",
+      "living_area": "Espace Salon",
+      "garden_view": "Vue sur Jardin",
+      "courtyard_access": "Accès au Patio",
+      "medina_view": "Vue sur la Médina",
+      "panoramic_views": "Vues Panoramiques",
+      "butler_service": "Service de Majordome"
+    }
+  },
+  "home": {
+    "featured_title": "Nos Chambres Signatures",
+    "featured_subtitle": "Découvrez le luxe authentique dans nos suites soigneusement sélectionnées.",
+    "view_all": "Voir Tous les Hébergements"
+  },
+  "wishlist": {
+    "title": "Votre Liste de Souhaits",
+    "empty": "Votre liste est vide",
+    "remove": "Retirer",
+    "view": "Voir la Chambre",
+    "explore": "Explorer nos chambres"
+  },
+  "booking": {
+    "title": "Réservation Demandée",
+    "success": "Merci, {{name}} — nous confirmerons votre séjour pour la chambre {{room}} sous peu.",
+    "close": "Fermer",
+    "submit": "Demander une Réservation",
+    "labels": {
+      "name": "Nom Complet *",
+      "email": "Adresse E-mail *",
+      "checkIn": "Date d'Arrivée *",
+      "checkOut": "Date de Départ *",
+      "phone": "Téléphone (Optionnel)",
+      "guests": "Invités *",
+      "message": "Demandes Spéciales (Optionnel)"
+    },
+    "errors": {
+      "nameReq": "Le nom est requis",
+      "emailReq": "L'e-mail est requis",
+      "emailInvalid": "Format d'e-mail invalide",
+      "checkInReq": "La date d'arrivée est requise",
+      "checkOutReq": "La date de départ est requise",
+      "checkOutAfter": "Le départ doit être après l'arrivée"
+    }
+  },
+  "testimonials": {
+    "title": "Expériences des Invités"
+  },
+  "footer": {
+    "description": "Un sanctuaire de pureté et de sérénité au cœur de la Médina. Découvrez la chaleur authentique de l'hospitalité marocaine.",
+    "contact": "Contact",
+    "rights": "© {{year}} Riad Dar Safaa. Tous droits réservés."
+  }
+}
