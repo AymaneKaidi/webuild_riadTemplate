@@ -1,7 +1,7 @@
-import { useState } from 'react';
 import { Heart, Star, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { useWishlist } from '../../context/WishlistContext';
 
 interface Room {
   id: string;
@@ -16,12 +16,13 @@ interface Room {
 }
 
 export default function RoomCard({ room }: { room: Room }) {
-  const [isWishlisted, setIsWishlisted] = useState(false);
+  const { state, toggleWishlist } = useWishlist();
+  const isWishlisted = state.wishlistIds.includes(room.id);
 
-  const toggleWishlist = (e: React.MouseEvent) => {
+  const handleToggle = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
-    setIsWishlisted(!isWishlisted);
+    toggleWishlist(room.id);
   };
 
   return (
@@ -36,7 +37,7 @@ export default function RoomCard({ room }: { room: Room }) {
             Image Preview
           </div>
           <button 
-            onClick={toggleWishlist}
+            onClick={handleToggle}
             className="absolute top-4 right-4 z-10 p-2 bg-white/80 backdrop-blur-sm rounded-full hover:bg-white transition-colors"
           >
             <Heart className={`w-5 h-5 transition-colors ${isWishlisted ? 'fill-terracotta text-terracotta' : 'text-charcoal'}`} />

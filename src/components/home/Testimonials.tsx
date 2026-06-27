@@ -1,15 +1,44 @@
 import { Star } from 'lucide-react';
+import { useRef, useEffect } from 'react';
 import testimonials from '../../data/testimonials.json';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Testimonials() {
   const displayedTestimonials = testimonials.slice(0, 3);
+  const gridRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const ctx = gsap.context(() => {
+      if (!gridRef.current) return;
+      
+      gsap.from(gridRef.current.children, {
+        y: 40,
+        opacity: 0,
+        duration: 0.8,
+        stagger: 0.2,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: gridRef.current,
+          start: 'top 85%',
+          once: true,
+        },
+      });
+    }, gridRef);
+
+    return () => ctx.revert();
+  }, []);
 
   return (
-    <section className="py-24 bg-charcoal text-sand">
+    <section className="py-24 bg-charcoal text-sand overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 text-center">
         <h2 className="font-heading text-4xl text-teal-light mb-16">Guest Experiences</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {displayedTestimonials.map((t, idx) => (
             <div key={idx} className="flex flex-col items-center">
               <div className="flex space-x-1 text-terracotta mb-6">

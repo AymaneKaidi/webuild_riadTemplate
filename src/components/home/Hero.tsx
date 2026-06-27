@@ -1,12 +1,44 @@
+import { useRef, useEffect } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Link } from 'react-router-dom';
 import { ArrowDown } from 'lucide-react';
 
+gsap.registerPlugin(ScrollTrigger);
+
 export default function Hero() {
+  const heroRef = useRef<HTMLDivElement>(null);
+  const bgRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const ctx = gsap.context(() => {
+      gsap.to(bgRef.current, {
+        y: '15%',
+        ease: 'none',
+        scrollTrigger: {
+          trigger: heroRef.current,
+          start: 'top top',
+          end: 'bottom top',
+          scrub: true,
+        },
+      });
+    }, heroRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <div className="relative min-h-screen flex flex-col items-center justify-center text-center px-4"
+    <div ref={heroRef} className="relative min-h-[100vh] flex flex-col items-center justify-center text-center px-4 overflow-hidden">
+      {/* Background layer for parallax */}
+      <div 
+         ref={bgRef}
+         className="absolute inset-0 w-full h-[120%] -top-[10%]"
          style={{
            background: 'linear-gradient(135deg, #18332F 0%, #7A3326 50%, #222525 100%)'
-         }}>
+         }} 
+      />
       {/* Decorative subtle overlay */}
       <div className="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-terracotta to-transparent pointer-events-none" />
       

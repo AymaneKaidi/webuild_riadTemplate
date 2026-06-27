@@ -7,6 +7,8 @@ import {
 } from 'lucide-react';
 import roomsData from '../data/rooms.json';
 import RoomGrid from '../components/rooms/RoomGrid';
+import { useWishlist } from '../context/WishlistContext';
+import BookingModal from '../components/booking/BookingModal';
 
 const amenityIconMap: Record<string, React.ReactNode> = {
   "King Bed": <BedDouble className="w-5 h-5" />,
@@ -36,7 +38,8 @@ const amenityIconMap: Record<string, React.ReactNode> = {
 export default function RoomDetailPage() {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
-  const [isWishlisted, setIsWishlisted] = useState(false);
+  const { state, toggleWishlist } = useWishlist();
+  const [isBookingOpen, setIsBookingOpen] = useState(false);
 
   // Scroll to top when slug changes
   useEffect(() => {
@@ -44,6 +47,7 @@ export default function RoomDetailPage() {
   }, [slug]);
 
   const room = roomsData.find(r => r.slug === slug);
+  const isWishlisted = room ? state.wishlistIds.includes(room.id) : false;
 
   if (!room) {
     return (
@@ -98,7 +102,7 @@ export default function RoomDetailPage() {
               <div className="flex justify-between items-start mb-4">
                 <h1 className="font-heading text-4xl md:text-5xl text-teal">{room.name}</h1>
                 <button 
-                  onClick={() => setIsWishlisted(!isWishlisted)}
+                  onClick={() => toggleWishlist(room.id)}
                   className="p-3 bg-white shadow-sm rounded-full hover:shadow-md transition-all shrink-0 ml-4"
                 >
                   <Heart className={`w-6 h-6 transition-colors ${isWishlisted ? 'fill-terracotta text-terracotta' : 'text-charcoal'}`} />
@@ -143,7 +147,10 @@ export default function RoomDetailPage() {
                 </div>
               </div>
 
-              <button className="w-full py-4 bg-terracotta text-white font-body uppercase tracking-widest text-sm hover:bg-terracotta-dark transition-colors mt-auto">
+              <button 
+                onClick={() => setIsBookingOpen(true)}
+                className="w-full py-4 bg-terracotta text-white font-body uppercase tracking-widest text-sm hover:bg-terracotta-dark transition-colors mt-auto"
+              >
                 Book Now
               </button>
             </div>
@@ -158,6 +165,13 @@ export default function RoomDetailPage() {
           </div>
         )}
       </div>
+
+      {/* Booking Modal */}
+      <BookingModal 
+        isOpen={isBookingOpen}
+        onClose={() => setIsBookingOpen(false)}
+        room={{ name: room.name, price: room.price, currency: room.currency }}
+      />
     </div>
   );
 }

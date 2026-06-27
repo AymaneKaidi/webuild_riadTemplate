@@ -1,11 +1,15 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Heart, Globe } from 'lucide-react';
+import { useWishlist } from '../../context/WishlistContext';
+import WishlistDrawer from './WishlistDrawer';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const location = useLocation();
   const isHome = location.pathname === '/';
+  const { state } = useWishlist();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,14 +42,24 @@ export default function Navbar() {
             <Globe className="w-5 h-5" />
             <span className="text-xs font-medium uppercase">EN</span>
           </div>
-          <button className="relative hover:text-terracotta transition-colors">
+          <button 
+            onClick={() => setIsDrawerOpen(true)}
+            className="relative hover:text-terracotta transition-colors"
+          >
             <Heart className="w-6 h-6" />
-            <span className="absolute -top-1 -right-1 bg-terracotta text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">
-              2
-            </span>
+            {state.wishlistIds.length > 0 && (
+              <span className="absolute -top-1 -right-1 bg-terracotta text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">
+                {state.wishlistIds.length}
+              </span>
+            )}
           </button>
         </div>
       </div>
+
+      <WishlistDrawer 
+        isOpen={isDrawerOpen} 
+        onClose={() => setIsDrawerOpen(false)} 
+      />
     </nav>
   );
 }
