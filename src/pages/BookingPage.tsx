@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion } from 'motion/react';
 import { CheckCircle2, ArrowLeft } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import roomsData from '../data/rooms.json';
