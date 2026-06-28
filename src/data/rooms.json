@@ -105,7 +105,7 @@
     },
     "amenities": ["Two King Beds", "Private Rooftop", "Panoramic Views", "Butler Service", "Fireplace"],
     "images": ["/images/room_4.png"],
-    "featured": false
+    "featured": true
   },
   {
     "id": "5",

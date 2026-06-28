@@ -5,10 +5,10 @@ export default function Footer() {
   const { t } = useTranslation();
 
   return (
-    <footer className="bg-charcoal text-sand py-16">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
+    <footer className="bg-charcoal text-sand py-12 md:py-16">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
         <div className="col-span-1 md:col-span-1">
-          <Link to="/" className="font-heading text-3xl tracking-wide text-teal-light mb-6 block text-start">
+          <Link to="/" className="font-heading text-3xl tracking-wide text-teal-light mb-4 md:mb-6 block text-start">
             Dar Safaa
           </Link>
           <p className="font-body text-sand/70 text-sm leading-relaxed text-start">

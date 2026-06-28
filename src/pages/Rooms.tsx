@@ -21,9 +21,9 @@ export default function Rooms() {
 
   return (
     <div className="min-h-screen bg-sand text-charcoal pt-24">
-      <div className="max-w-7xl mx-auto px-6 py-12 text-center">
-        <h1 className="font-heading text-5xl md:text-6xl text-teal mb-6">{t('rooms.page_title')}</h1>
-        <p className="font-body text-lg max-w-2xl mx-auto italic text-terracotta-dark">
+      <div className="max-w-7xl mx-auto px-6 py-8 md:py-12 text-center">
+        <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl text-teal mb-4 md:mb-6 leading-tight">{t('rooms.page_title')}</h1>
+        <p className="font-body text-base md:text-lg max-w-2xl mx-auto italic text-terracotta-dark leading-relaxed">
           {t('rooms.page_subtitle')}
         </p>
       </div>
@@ -38,7 +38,7 @@ export default function Rooms() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 py-16">
+      <div className="max-w-7xl mx-auto px-6 py-12 md:py-16">
         <RoomGrid rooms={filteredRooms} />
       </div>
     </div>

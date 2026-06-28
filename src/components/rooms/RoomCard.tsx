@@ -58,16 +58,16 @@ export default function RoomCard({ room }: { room: Room }) {
           )}
           <button
             onClick={handleToggle}
-            className="absolute top-4 end-4 z-10 p-2 bg-white/80 backdrop-blur-sm rounded-full hover:bg-white transition-colors"
+            className="absolute top-4 end-4 z-10 p-2 transition-transform hover:scale-110"
           >
-            <Heart className={`w-5 h-5 transition-colors ${isWishlisted ? 'fill-terracotta text-terracotta' : 'text-charcoal'}`} />
+            <Heart className={`w-6 h-6 transition-colors drop-shadow-md ${isWishlisted ? 'fill-terracotta text-terracotta' : 'text-white hover:text-terracotta'}`} />
           </button>
         </div>
 
         {/* Content */}
         <div className="p-4 md:p-6 flex flex-col flex-grow">
           <div className="flex justify-between items-start mb-2">
-            <h3 className="font-heading text-xl md:text-2xl text-teal">{roomName}</h3>
+            <h3 className="font-heading text-lg md:text-2xl text-teal leading-tight">{roomName}</h3>
           </div>
 
           <div className="flex items-center gap-x-4 text-xs md:text-sm font-body text-charcoal/70 mb-4">
@@ -87,7 +87,7 @@ export default function RoomCard({ room }: { room: Room }) {
 
           <div className="mt-auto md:mt-4 flex flex-col xl:flex-row items-start xl:items-center justify-between gap-2">
             <div>
-              <span className="font-heading text-lg lg:text-xl">{room.price} {room.currency}</span>
+              <span className="font-heading text-base md:text-lg lg:text-xl">{room.price} {room.currency}</span>
               <span className="text-[10px] lg:text-xs uppercase tracking-widest text-charcoal/60 ms-1">{t('rooms.per_night')}</span>
             </div>
             <span className="text-[10px] lg:text-xs uppercase tracking-widest text-terracotta group-hover:text-terracotta-dark font-semibold transition-colors">

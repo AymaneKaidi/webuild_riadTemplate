@@ -8,7 +8,6 @@ import {
 import roomsData from '../data/rooms.json';
 import { useWishlist } from '../context/WishlistContext';
 import { useTranslation } from 'react-i18next';
-import BookingModal from '../components/booking/BookingModal';
 import RoomCard from '../components/rooms/RoomCard';
 
 const amenityIconMap: Record<string, React.ReactNode> = {
@@ -40,7 +39,6 @@ export default function RoomDetailPage() {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
   const { state, toggleWishlist } = useWishlist();
-  const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
   const { t, i18n } = useTranslation();
   const currentLang = (i18n.language || 'en') as 'en' | 'fr' | 'ar';
   
@@ -113,12 +111,12 @@ export default function RoomDetailPage() {
             {/* Details Section */}
             <div className="lg:col-span-5 flex flex-col">
               <div className="flex justify-between items-start mb-4">
-                <h1 className="font-heading text-4xl md:text-5xl text-teal">{roomName}</h1>
+                <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl text-teal leading-tight">{roomName}</h1>
                 <button
                   onClick={() => toggleWishlist(room.id)}
-                  className="p-3 bg-white shadow-sm rounded-full hover:shadow-md transition-all shrink-0 ml-4"
+                  className="p-2 transition-transform hover:scale-110 shrink-0 ml-4"
                 >
-                  <Heart className={`w-6 h-6 transition-colors ${isWishlisted ? 'fill-terracotta text-terracotta' : 'text-charcoal'}`} />
+                  <Heart className={`w-7 h-7 transition-colors drop-shadow-sm ${isWishlisted ? 'fill-terracotta text-terracotta' : 'text-charcoal/40 hover:text-terracotta'}`} />
                 </button>
               </div>
 
@@ -135,17 +133,17 @@ export default function RoomDetailPage() {
 
               <div className="my-8">
                 <div className="flex items-baseline mb-2">
-                  <span className="font-heading text-4xl text-teal">{room.price} {room.currency}</span>
+                  <span className="font-heading text-3xl md:text-4xl text-teal">{room.price} {room.currency}</span>
                   <span className="text-sm uppercase tracking-widest text-charcoal/60 ms-2">{t('rooms.per_night')}</span>
                 </div>
               </div>
 
-              <div className="font-body text-charcoal/80 leading-relaxed space-y-4 mb-10">
+              <div className="font-body text-sm md:text-base text-charcoal/80 leading-relaxed space-y-4 mb-8 md:mb-10">
                 <p>{(room.longDescription as unknown as Record<string, string>)[currentLang] || (room.longDescription as unknown as Record<string, string>).en}</p>
               </div>
 
               <div className="mb-10">
-                <h3 className="font-heading text-2xl text-teal mb-6">{t('rooms.amenities')}</h3>
+                <h3 className="font-heading text-xl md:text-2xl text-teal mb-4 md:mb-6 leading-tight">{t('rooms.amenities')}</h3>
                 <div className="grid grid-cols-2 gap-y-4 gap-x-2 font-body text-sm text-charcoal/80">
                   {room.amenities.map((amenity, idx) => (
                     <div key={idx} className="flex items-center space-x-3">
@@ -159,7 +157,7 @@ export default function RoomDetailPage() {
               </div>
 
               <button
-                onClick={() => setIsBookingModalOpen(true)}
+                onClick={() => navigate(`/booking/${room.slug}`)}
                 className="w-full py-4 bg-terracotta text-white font-body uppercase tracking-widest text-sm hover:bg-terracotta-dark transition-colors mt-auto"
               >
                 {t('rooms.book_now')}
@@ -171,7 +169,7 @@ export default function RoomDetailPage() {
         {/* You Might Also Like Section */}
         {similarRooms.length > 0 && (
           <div className="mt-32 border-t border-charcoal/10 pt-16">
-            <h2 className="font-heading text-4xl text-teal mb-12 text-center">{t('rooms.similar')}</h2>
+            <h2 className="font-heading text-2xl md:text-4xl text-teal mb-8 md:mb-12 text-center leading-tight">{t('rooms.similar')}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {similarRooms.map(similarRoom => (
                 <RoomCard key={similarRoom.id} room={similarRoom} />
@@ -180,13 +178,6 @@ export default function RoomDetailPage() {
           </div>
         )}
       </div>
-
-      {/* Booking Modal */}
-      <BookingModal
-        isOpen={isBookingModalOpen}
-        onClose={() => setIsBookingModalOpen(false)}
-        room={{ name: roomName, price: room.price, currency: room.currency, capacity: room.guestCount, images: room.images }}
-      />
     </div>
   );
 }
