@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, CheckCircle2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { useScrollLock } from '../../hooks/useScrollLock';
 
 interface BookingModalProps {
   isOpen: boolean;
@@ -15,6 +16,7 @@ interface BookingModalProps {
 }
 
 export default function BookingModal({ isOpen, onClose, room }: BookingModalProps) {
+  useScrollLock(isOpen);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});

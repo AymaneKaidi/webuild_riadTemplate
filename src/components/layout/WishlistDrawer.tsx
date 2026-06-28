@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { useWishlist } from '../../context/WishlistContext';
 import { useTranslation } from 'react-i18next';
 import roomsData from '../../data/rooms.json';
+import { useScrollLock } from '../../hooks/useScrollLock';
 
 interface WishlistDrawerProps {
   isOpen: boolean;
@@ -11,6 +12,7 @@ interface WishlistDrawerProps {
 }
 
 export default function WishlistDrawer({ isOpen, onClose }: WishlistDrawerProps) {
+  useScrollLock(isOpen);
   const { state, toggleWishlist } = useWishlist();
   const { t, i18n } = useTranslation();
   const currentLang = (i18n.language || 'en') as 'en' | 'fr' | 'ar';

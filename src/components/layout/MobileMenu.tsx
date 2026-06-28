@@ -1,8 +1,9 @@
-import { useEffect } from 'react';
+
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import { X } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { useScrollLock } from '../../hooks/useScrollLock';
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -10,19 +11,8 @@ interface MobileMenuProps {
 }
 
 export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
+  useScrollLock(isOpen);
   const { t, i18n } = useTranslation();
-
-  // Lock body scroll when the menu is open to prevent Lenis/native scroll conflicts
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
-    return () => {
-      document.body.style.overflow = '';
-    };
-  }, [isOpen]);
 
   const links = [
     { name: t('nav.home'), path: '/' },
