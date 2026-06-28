@@ -67,8 +67,12 @@ export default function WishlistDrawer({ isOpen, onClose }: WishlistDrawerProps)
                   const roomName = (room.name as unknown as Record<string, string>)[currentLang] || (room.name as unknown as Record<string, string>).en;
                   return (
                   <div key={room.id} className="flex bg-white rounded shadow-sm overflow-hidden group p-2">
-                    <div className="w-24 bg-charcoal/5 flex-shrink-0 flex items-center justify-center text-charcoal/20 text-[10px] uppercase font-body rounded">
-                      {t('common.image')}
+                    <div className="w-24 bg-charcoal/5 flex-shrink-0 flex items-center justify-center text-charcoal/20 text-[10px] uppercase font-body rounded overflow-hidden">
+                      {room.images && room.images[0] && room.images[0] !== '/placeholder.jpg' ? (
+                        <img src={room.images[0]} alt={roomName} className="w-full h-full object-cover" />
+                      ) : (
+                        t('common.image')
+                      )}
                     </div>
                     <div className="p-4 flex-grow flex flex-col">
                       <div className="flex justify-between items-start">

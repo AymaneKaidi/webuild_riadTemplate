@@ -185,7 +185,7 @@ export default function RoomDetailPage() {
       <BookingModal
         isOpen={isBookingModalOpen}
         onClose={() => setIsBookingModalOpen(false)}
-        room={{ name: roomName, price: room.price, currency: room.currency, capacity: room.guestCount }}
+        room={{ name: roomName, price: room.price, currency: room.currency, capacity: room.guestCount, images: room.images }}
       />
     </div>
   );

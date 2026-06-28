@@ -12,6 +12,7 @@ interface BookingModalProps {
     price: number;
     currency: string;
     capacity: number;
+    images?: string[];
   };
 }
 
@@ -153,8 +154,12 @@ export default function BookingModal({ isOpen, onClose, room }: BookingModalProp
             ) : (
               <>
                 <div className="bg-sand p-6 flex items-center space-x-4 border-b border-charcoal/10 shrink-0">
-                  <div className="w-20 h-20 bg-charcoal/10 rounded flex items-center justify-center text-[10px] uppercase font-body text-charcoal/40 shrink-0">
-                    {t('common.image')}
+                  <div className="w-20 h-20 bg-charcoal/10 rounded flex items-center justify-center text-[10px] uppercase font-body text-charcoal/40 shrink-0 overflow-hidden">
+                    {room.images && room.images[0] && room.images[0] !== '/placeholder.jpg' ? (
+                      <img src={room.images[0]} alt={room.name} className="w-full h-full object-cover" />
+                    ) : (
+                      t('common.image')
+                    )}
                   </div>
                   <div>
                     <h2 className="font-heading text-2xl text-teal">{room.name}</h2>
